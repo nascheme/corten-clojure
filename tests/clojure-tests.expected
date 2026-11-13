@@ -1,0 +1,856 @@
+agents | ERROR in continue-handler | nil
+agents | ERROR in default-modes | (= :continue (error-mode (agent nil :error-handler println)))
+agents | ERROR in default-modes | (= :fail (error-mode (agent nil)))
+agents | ERROR in earmuff-agent-bound | nil
+agents | ERROR in handle-all-throwables-during-agent-actions | nil
+agents | ERROR in seque-into-seque-deadlock | (= (range 10) (seque 3 (seque 3 (range 10))))
+agents | ERROR in thread-conveyance-to-agents | nil
+agents | LOAD ERROR in (deftest can-send-from-error-handler-before-popping-action-that-caused-error) - No such namespace: TimeUnit/SECONDS
+agents | LOAD ERROR in (deftest can-send-to-self-from-error-handler-before-popping-action-that-caused-error) - No such namespace: TimeUnit/SECONDS
+agents | LOAD ERROR in (deftest seque-threads) - No such namespace: Thread/sleep
+agents | SKIPPED import [java.util.concurrent CountDownLatch TimeUnit] - Could not locate java/util/concurrent.clj, .cljc or .cljs on the load path
+api | LOAD ERROR in (defn api-var) - No such namespace: Clojure/var
+api | LOAD ERROR in (defn api-var-str) - No such namespace: Clojure/var
+api | LOAD ERROR in (defn roundtrip) - No such namespace: Clojure/read
+api | LOAD ERROR in (defspec api-can-find-var) - Var #'clojure.test-clojure.api/api-can-find-var is unbound
+api | LOAD ERROR in (defspec api-can-find-var-str) - Var #'clojure.test-clojure.api/api-can-find-var-str is unbound
+api | LOAD ERROR in (defspec api-can-read) - Var #'clojure.test-clojure.api/api-can-read is unbound
+api | SKIPPED import clojure.java.api.Clojure - Could not locate clojure/java/api.clj, .cljc or .cljs on the load path
+api | SKIPPED import clojure.lang.IFn - refer: IFn does not exist
+api | SKIPPED import clojure.lang.Var - refer: Var does not exist
+api | SKIPPED require [clojure.test-clojure.generators :as cgen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+api | SKIPPED require [clojure.test.generative :refer (defspec)] - Could not locate clojure/test/generative.clj, .cljc or .cljs on the load path
+atoms | LOAD ERROR in (deftest atoms-are-suppliers) - Unable to resolve symbol: java.util.function.Supplier
+clojure_walk | ERROR in t-transform-keys | (= (w/transform-keys {:a 1, nil {:b 2, :c 3}, :d 4, :e 5} (fn [k] (if (keyword? k) (str (name k) "-" (name k)) k))) {"a-a" 1, nil {"b-b" 2, "c-c" 3}, "d-d" 4, "e-e" 5})
+clojure_walk | ERROR in walk | nil
+clojure_xml | LOAD ERROR in (deftest CLJ-2611-avoid-XXE) - No such namespace: xml/parse
+clojure_xml | SKIPPED import [java.io ByteArrayInputStream] - Could not locate java/io.clj, .cljc or .cljs on the load path
+clojure_xml | SKIPPED require [clojure.xml :as xml] - Could not locate clojure/xml.clj, .cljc or .cljs on the load path
+control | ERROR in test-case test emits return types | (clojure.core/nil? (clojure.core/re-find (corten.kernel/regexp "^Reflection warning") (clojure.test-helper/with-err-print-writer (clojure.test-helper/eval-in-temp-ns (Long. (case 1 1 "1...
+control | ERROR in test-case test emits return types | (clojure.core/nil? (clojure.core/re-find (corten.kernel/regexp "^Reflection warning") (clojure.test-helper/with-err-print-writer (clojure.test-helper/eval-in-temp-ns (Long. (case 1 1 1)...
+control | ERROR in test-case test emits return types | (clojure.core/nil? (clojure.core/re-find (corten.kernel/regexp "^Reflection warning") (clojure.test-helper/with-err-string-writer (clojure.test-helper/eval-in-temp-ns (Long. (case 1 1 "...
+control | ERROR in test-case test emits return types | (clojure.core/nil? (clojure.core/re-find (corten.kernel/regexp "^Reflection warning") (clojure.test-helper/with-err-string-writer (clojure.test-helper/eval-in-temp-ns (Long. (case 1 1 1...
+control | ERROR in test-case test error on duplicate test constants | (thrown-with-cause-msg? clojure.lang.Compiler$CompilerException (corten.kernel/regexp "Duplicate case test constant: 1") (eval (corten.kernel/concat (corten.kernel/list (...
+control | ERROR in test-case test warn when boxing/hashing expr for all-ints case | (clojure.core/re-matches (corten.kernel/regexp "Performance warning, .*:\\d+ - case has int tests, but tested expression is not primitive..*\\r?\\n") (cloju...
+control | ERROR in test-case test warn when boxing/hashing expr for all-ints case | (clojure.core/re-matches (corten.kernel/regexp "Performance warning, .*:\\d+ - case has int tests, but tested expression is not primitive..*\\r?\\n") (cloju...
+control | ERROR in test-case | nil
+control | ERROR in test-condp | (thrown? IllegalArgumentException (condp = 1 2 :fail))
+control | ERROR in test-condp | (thrown? IllegalArgumentException (condp = 1))
+data | ERROR in diff-test | (= [#{1} #{3} #{2}] (diff (HashSet. [1 2]) (HashSet. [2 3])))
+data | SKIPPED import java.util.HashSet - Could not locate java/util.clj, .cljc or .cljs on the load path
+data_structures | ERROR in test-conj | (thrown? ClassCastException (conj "" \a))
+data_structures | ERROR in test-conj | (thrown? ClassCastException (conj (into-array []) 1))
+data_structures | ERROR in test-equality | (and (not= (class (struct equality-struct 1 2)) (class (array-map :a 1 :b 2))) (= (struct equality-struct 1 2) (array-map :a 1 :b 2)))
+data_structures | ERROR in test-equality | (and (not= (class (struct equality-struct 1 2)) (class (hash-map :a 1 :b 2))) (= (struct equality-struct 1 2) (hash-map :a 1 :b 2)))
+data_structures | ERROR in test-equality | (and (not= (class (struct equality-struct 1 2)) (class (sorted-map :a 1 :b 2))) (= (struct equality-struct 1 2) (sorted-map :a 1 :b 2)))
+data_structures | ERROR in test-equality | (and (not= (class (struct equality-struct 1 2)) (class (sorted-map-by compare :a 1 :b 2))) (= (struct equality-struct 1 2) (sorted-map-by compare :a 1 :b 2)))
+data_structures | ERROR in test-equality | (not (= nil (new Object)))
+data_structures | ERROR in test-hash-set | (= (hash-set (Integer. -1)) (hash-set (Long. -1)))
+data_structures | ERROR in test-peek | (thrown? ClassCastException (peek #{1}))
+data_structures | ERROR in test-peek | (thrown? ClassCastException (peek {:a 1}))
+data_structures | ERROR in test-pop | (thrown? ClassCastException (pop #{1}))
+data_structures | ERROR in test-pop | (thrown? ClassCastException (pop #{:a 1}))
+data_structures | FAIL in test-hash-set | (= (hash-set 1 2.5 2/3 "ab" \x (quote cd) :kw) #{1 2.5 2/3 "ab" \x (quote cd) :kw})
+data_structures | FAIL in test-sorted-map-keys | (thrown? ClassCastException (assoc (sorted-map) #{} 1))
+data_structures | FAIL in test-sorted-map-keys | (thrown? ClassCastException (assoc (sorted-map) () 1))
+data_structures | FAIL in test-sorted-map-keys | (thrown? ClassCastException (assoc (sorted-map) {} 1))
+data_structures | FAIL in test-sorted-map-keys | (thrown? ClassCastException (sorted-map #{} 1))
+data_structures | FAIL in test-sorted-map-keys | (thrown? ClassCastException (sorted-map () 1))
+data_structures | FAIL in test-sorted-map-keys | (thrown? ClassCastException (sorted-map {} 1))
+data_structures | FAIL in test-sorted-set | (thrown? ClassCastException (sorted-set #{}))
+data_structures | FAIL in test-sorted-set | (thrown? ClassCastException (sorted-set ()))
+data_structures | FAIL in test-sorted-set | (thrown? ClassCastException (sorted-set {}))
+data_structures | LOAD ERROR in (defn gen-transient-map-action) - No such namespace: gen/rand-nth
+data_structures | LOAD ERROR in (defn gen-transient-map-actions) - No such namespace: gen/reps
+data_structures | LOAD ERROR in (defn gen-transient-set-action) - No such namespace: gen/rand-nth
+data_structures | LOAD ERROR in (defn gen-transient-set-actions) - No such namespace: gen/reps
+data_structures | LOAD ERROR in (defn gen-transient-vector-action) - No such namespace: gen/rand-nth
+data_structures | LOAD ERROR in (defn gen-transient-vector-actions) - No such namespace: gen/reps
+data_structures | LOAD ERROR in (defspec same-output-persistent-transient-map) - No such namespace: clojure.lang.PersistentArrayMap/EMPTY
+data_structures | LOAD ERROR in (defspec same-output-persistent-transient-set) - Var #'clojure.test-clojure.data-structures/same-output-persistent-transient-set is unbound
+data_structures | LOAD ERROR in (defspec same-output-persistent-transient-vector) - Var #'clojure.test-clojure.data-structures/same-output-persistent-transient-vector is unbound
+data_structures | LOAD ERROR in (defspec subcollection-counts-are-consistent) - Var #'clojure.test-clojure.data-structures/subcollection-counts-are-consistent is unbound
+data_structures | LOAD ERROR in (defstruct equality-struct) - Var #'clojure.test-clojure.data-structures/equality-struct is unbound
+data_structures | LOAD ERROR in (deftest test-contains?) - Unable to resolve symbol: java.util.HashMap
+data_structures | LOAD ERROR in (deftest test-count) - No such namespace: clojure.lang.PersistentQueue/EMPTY
+data_structures | LOAD ERROR in (deftest test-map-entry?) - Unable to resolve symbol: java.util.HashMap
+data_structures | SKIPPED import [java.util Collection] - Could not locate java/util.clj, .cljc or .cljs on the load path
+data_structures | SKIPPED require [clojure.data.generators :as gen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+data_structures | SKIPPED require [clojure.test-clojure.generators :as cgen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+data_structures | SKIPPED use [clojure.test.generative :exclude (is)] - Could not locate clojure/test/generative.clj, .cljc or .cljs on the load path
+def | FAIL in defn-error-messages assume single arity syntax | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/defn did not conform to spec") (eval-in-temp-ns (defn foo a)))
+def | FAIL in defn-error-messages bad name | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/defn did not conform to spec") (eval-in-temp-ns (defn "bad docstring" testname [arg1 arg2])))
+def | FAIL in defn-error-messages don't allow interleaved map | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/defn did not conform to spec") (eval-in-temp-ns (defn a "asdf" ([a] 1) {:a :b} ([] 1))...
+def | FAIL in defn-error-messages missing parameter/signature | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/defn did not conform to spec") (eval-in-temp-ns (defn testname)))
+def | FAIL in defn-error-messages multiarity syntax invalid parameter declaration | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/defn did not conform to spec") (eval-in-temp-ns (defn foo (arg1 ar...
+def | FAIL in defn-error-messages multiarity syntax invalid signature | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/defn did not conform to spec") (eval-in-temp-ns (defn foo ([a] 1) [a b])))
+def | FAIL in non-dynamic-warnings warning for *hello* | (not (empty? (with-err-print-writer (eval-in-temp-ns (def *hello* "hi")))))
+def | SKIPPED use clojure.test-clojure.protocols - Var #'clojure.test-clojure.protocols.examples/ExampleInterface is unbound
+delays | ERROR in calls-once-in-parallel | nil
+delays | ERROR in saves-exceptions-in-parallel | nil
+delays | FAIL in saves-exceptions | (identical? first-result (try-call))
+delays | LOAD ERROR in (deftest delays-are-suppliers) - Unable to resolve symbol: java.util.function.Supplier
+delays | SKIPPED import [java.util.concurrent CyclicBarrier] - Could not locate java/util/concurrent.clj, .cljc or .cljs on the load path
+edn | LOAD ERROR in (defspec types-that-should-not-roundtrip) - Var #'clojure.test-clojure.edn/types-that-should-not-roundtrip is unbound
+edn | LOAD ERROR in (defspec types-that-should-roundtrip) - Var #'clojure.test-clojure.edn/types-that-should-roundtrip is unbound
+edn | SKIPPED require [clojure.test-clojure.generators :as cgen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+edn | SKIPPED require [clojure.test.generative :refer (defspec)] - Could not locate clojure/test/generative.clj, .cljc or .cljs on the load path
+errors | ERROR in Throwable->map-test | nil
+errors | ERROR in assert-arg-messages | nil
+errors | ERROR in compile-error-examples | (thrown-with-cause-msg? Exception (corten.kernel/regexp "No matching method.*taking 0 args") (eval (quote (Long/parseLong))))
+errors | ERROR in compile-error-examples | (thrown-with-cause-msg? Exception (corten.kernel/regexp "No matching method.*taking 3 args") (eval (quote (Long/parseLong :a :b :c))))
+errors | ERROR in ex-info-arities-construct-equivalent-exceptions | (= (.getCause ex1) (.getCause ex2))
+errors | ERROR in ex-info-arities-construct-equivalent-exceptions | (= (.getData ex1) (.getData ex2))
+errors | ERROR in ex-info-arities-construct-equivalent-exceptions | (= (.getMessage ex1) (.getMessage ex2))
+errors | FAIL in compile-error-examples | (thrown-with-msg? Exception (corten.kernel/regexp "No matching method.*taking 1 arg") (eval (quote (.jump "foo" 1))))
+errors | FAIL in ex-info-allows-nil-data | (= {} (ex-data (ex-info "message" nil (Throwable. "cause"))))
+errors | FAIL in ex-info-allows-nil-data | (= {} (ex-data (ex-info "message" nil)))
+evaluation | LOAD ERROR in (defn class-for-name) - No such namespace: java.lang.Class/forName
+evaluation | LOAD ERROR in (defstruct struct-with-symbols) - Var #'clojure.test-clojure.evaluation/struct-with-symbols is unbound
+evaluation | LOAD ERROR in (deftest Collections) - No namespace: clojure.test
+evaluation | LOAD ERROR in (deftest Eval) - No such namespace: Compiler/eval
+evaluation | LOAD ERROR in (deftest Metadata) - No namespace: clojure.test
+evaluation | LOAD ERROR in (deftest SymbolResolution) - No namespace: clojure.test
+evaluation | LOAD ERROR in (import (quote (java.lang Boolean))) - Could not locate quote.clj, .cljc or .cljs on the load path
+fn | ERROR in fn-error-checking bad arglist | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn "a" a))))
+fn | ERROR in fn-error-checking checks each signature | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn ([a] 1) ("a" 2)))))
+fn | ERROR in fn-error-checking correct name but invalid args | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn a "a"))))
+fn | ERROR in fn-error-checking first sig looks multiarity, rest of sigs should be lists | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn a ([a] 1) [a ...
+fn | ERROR in fn-error-checking looks like listy signature, but malformed declaration | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn (1)))))
+fn | ERROR in fn-error-checking missing parameter declaration | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn a))))
+fn | ERROR in fn-error-checking missing parameter declaration | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn))))
+fn | ERROR in fn-error-checking treat first param as args | (fails-with-cause? clojure.lang.ExceptionInfo (corten.kernel/regexp "Call to clojure.core/fn did not conform to spec") (eval (quote (fn "a" []))))
+for | ERROR in Doseq-Destructuring | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [{:syms [a b c]} (map (fn* [p1__N#] (zipmap (quote (a b c)) (range p1__N# 5))) (range 3)) x [a b c]] (clojure...
+for | ERROR in Doseq-While | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 2) :while (even? x) y (range 4)] (clojure.core/swap! acc__N__auto__ clojure.core/conj [x y])) (clojure.core/...
+for | ERROR in Doseq-While | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 4) :while (< x 3) y (range 4)] (clojure.core/swap! acc__N__auto__ clojure.core/conj [x y])) (clojure.core/de...
+for | ERROR in Doseq-While | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 6) :while (< x 5)] (clojure.core/swap! acc__N__auto__ clojure.core/conj x)) (clojure.core/deref acc__N__auto...
+for | ERROR in Doseq-While | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (range 4) y (only 4) :while (< y 3)] (clojure.core/swap! acc__N__auto__ clojure.core/conj [x y])) (clojure.core/de...
+for | ERROR in Doseq-While | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (range 4) y (only 4) :while (< y x)] (clojure.core/swap! acc__N__auto__ clojure.core/conj [x y])) (clojure.core/de...
+for | ERROR in Doseq-While-and-When | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 6) :while (< x 5) y (range 4) :when (odd? (+ x y))] (clojure.core/swap! acc__N__auto__ clojure.core...
+for | ERROR in Doseq-While-and-When | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 6) :while (< x 5) y (range 4) :when (odd? y)] (clojure.core/swap! acc__N__auto__ clojure.core/conj ...
+for | ERROR in Doseq-While-and-When | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (range 4) :when (odd? x) y (only 2) :while (odd? (+ x y))] (clojure.core/swap! acc__N__auto__ clojure.cor...
+for | ERROR in Doseq-While-and-When | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (range 4) :when (odd? x) y (only 6) :while (< y 5)] (clojure.core/swap! acc__N__auto__ clojure.core/conj ...
+for | ERROR in Doseq-While-and-When-Same-Binding | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 6) :while (< x 5) :when (do (if (< x 5) (odd? x)))] (clojure.core/swap! acc__N__auto__...
+for | ERROR in Doseq-While-and-When-Same-Binding | (clojure.core/= (clojure.core/let [acc__N__auto__ (clojure.core/atom [])] (clojure.core/doseq [x (only 6) :while (< x 5) :when (odd? x)] (clojure.core/swap! acc__N__auto__ clojure.core/conj...
+for | ERROR in For-Destructuring | (= (for [{:syms [a b c]} (map (fn* [p1__N#] (zipmap (quote (a b c)) (range p1__N# 5))) (range 3)) x [a b c]] (Integer. (str a b c x))) (quote (120 121 122 1231 1232 1233 2342 2343 2344)))
+for | ERROR in For-While | (= (for [x (only 2) :while (even? x) y (range 4)] [x y]) (quote ([0 0] [0 1] [0 2] [0 3])))
+for | ERROR in For-While | (= (for [x (only 4) :while (< x 3) y (range 4)] [x y]) (quote ([0 0] [0 1] [0 2] [0 3] [1 0] [1 1] [1 2] [1 3] [2 0] [2 1] [2 2] [2 3])))
+for | ERROR in For-While | (= (for [x (only 6) :while (< x 5)] x) (quote (0 1 2 3 4)))
+for | ERROR in For-While | (= (for [x (range 4) y (only 4) :while (< y 3)] [x y]) (quote ([0 0] [0 1] [0 2] [1 0] [1 1] [1 2] [2 0] [2 1] [2 2] [3 0] [3 1] [3 2])))
+for | ERROR in For-While | (= (for [x (range 4) y (only 4) :while (< y x)] [x y]) (quote ([1 0] [2 0] [2 1] [3 0] [3 1] [3 2])))
+for | ERROR in For-While-and-When | (= (for [x (only 6) :while (< x 5) y (range 4) :when (odd? (+ x y))] [x y]) (quote ([0 1] [0 3] [1 0] [1 2] [2 1] [2 3] [3 0] [3 2] [4 1] [4 3])))
+for | ERROR in For-While-and-When | (= (for [x (only 6) :while (< x 5) y (range 4) :when (odd? y)] [x y]) (quote ([0 1] [0 3] [1 1] [1 3] [2 1] [2 3] [3 1] [3 3] [4 1] [4 3])))
+for | ERROR in For-While-and-When | (= (for [x (range 4) :when (odd? x) y (only 2) :while (odd? (+ x y))] [x y]) (quote ([1 0] [3 0])))
+for | ERROR in For-While-and-When | (= (for [x (range 4) :when (odd? x) y (only 6) :while (< y 5)] [x y]) (quote ([1 0] [1 1] [1 2] [1 3] [1 4] [3 0] [3 1] [3 2] [3 3] [3 4])))
+for | ERROR in For-While-and-When-Same-Binding | (= (for [x (only 6) :while (< x 5) :when (do (if (< x 5) (odd? x)))] x) (quote (1 3)))
+for | ERROR in For-While-and-When-Same-Binding | (= (for [x (only 6) :while (< x 5) :when (odd? x)] x) (quote (1 3)))
+generators | LOAD ERROR in (def ednable-collections) - No such namespace: gen/vec
+generators | LOAD ERROR in (def ednable-scalars) - No such namespace: gen/byte
+generators | LOAD ERROR in (def keyword-pool) - Unable to resolve var: gen/*rnd*
+generators | LOAD ERROR in (def symbol-pool) - Unable to resolve var: gen/*rnd*
+generators | LOAD ERROR in (defn dup-readable) - No such namespace: gen/one-of
+generators | LOAD ERROR in (defn ednable) - No such namespace: gen/one-of
+generators | LOAD ERROR in (defn keyword-from-pool) - No such namespace: gen/rand-nth
+generators | LOAD ERROR in (defn namespace) - No such namespace: gen/rand-nth
+generators | LOAD ERROR in (defn non-ednable) - No such namespace: gen/one-of
+generators | LOAD ERROR in (defn record) - No such namespace: gen/rand-nth
+generators | LOAD ERROR in (defn record-source) - No such namespace: gen/geometric
+generators | LOAD ERROR in (defn symbol-from-pool) - No such namespace: gen/rand-nth
+generators | LOAD ERROR in (defn var) - No such namespace: gen/rand-nth
+generators | LOAD ERROR in (defn var-value-source) - No such namespace: gen/scalar
+generators | SKIPPED require [clojure.data.generators :as gen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+keywords | LOAD ERROR in (let [this-ns (str (.name *ns*))]) - No method name for Namespace
+logic | LOAD ERROR in (deftest test-if) - Unable to resolve symbol: java.util.Date
+logic | LOAD ERROR in (deftest test-not) - Unable to resolve symbol: java.util.Date
+macros | FAIL in ->>metadata-test a non-trivial form | (= {:bar :baz} (meta (second expanded)))
+macros | FAIL in ->metadata-test a nontrivial form | (= {:bar :baz} (meta (second expanded)))
+metadata | ERROR in public-vars-with-docstrings-have-added | (= [] (remove (comp :added meta) public-vars-with-docstrings-not-generated))
+metadata | FAIL in fns-preserve-metadata-on-maps | (= xm (meta (merge-with + x y)))
+metadata | FAIL in fns-preserve-metadata-on-maps | (= ym (meta (merge-with + y x)))
+metadata | FAIL in fns-preserve-metadata-on-sets | (= cowsm (meta cow-names))
+metadata | FAIL in fns-preserve-metadata-on-sets | (= cowsm (meta renamed))
+metadata | LOAD ERROR in (def public-vars) - No namespace: clojure.pprint
+metadata | LOAD ERROR in (def public-vars-with-docstrings) - Var #'clojure.test-clojure.metadata/public-vars is unbound
+metadata | LOAD ERROR in (def public-vars-with-docstrings-not-generated) - Var #'clojure.test-clojure.metadata/public-vars-with-docstrings is unbound
+metadata | LOAD ERROR in (doseq [ns public-namespaces]) - Could not locate clojure/inspector.clj, .cljc or .cljs on the load path
+multimethods | ERROR in global-hierarchy-test | nil
+multimethods | ERROR in indirect-preferences-mulitmethod-test Using custom hierarchy x should be preferred over y if an ancestor of x is preferred over y | (= :parent-1 (indirect-4 :child))
+multimethods | ERROR in indirect-preferences-mulitmethod-test Using custom hierarchy x should be preferred over y if x is preferred over an ancestor of y | (= :parent-1 (indirect-3 :child))
+multimethods | ERROR in indirect-preferences-mulitmethod-test Using global hierarchy x should be preferred over y if an ancestor of x is preferred over y | (= :clojure.test-clojure.multimethods/parent-1 (indirect-2 :clojure.test-clojure.mul...
+multimethods | ERROR in indirect-preferences-mulitmethod-test Using global hierarchy x should be preferred over y if x is preferred over an ancestor of y | (= :clojure.test-clojure.multimethods/parent-1 (indirect-1 :clojure.test-clojure.mul...
+multimethods | ERROR in using-diamond-inheritance | nil
+multimethods | FAIL in cycles-are-forbidden a tag cannot be its own ancestor | (thrown-with-msg? Throwable (corten.kernel/regexp "Cyclic derivation: :clojure.test-clojure.multimethods/child has :clojure.test-clojure.multimethods/ancestor-1 ...
+multimethods | LOAD ERROR in (deftest derivation-world-bridges-to-java-inheritance) - Unable to resolve symbol: java.util.Map
+multimethods | LOAD ERROR in (deftest isA-multimethod-test) - Unable to resolve symbol: java.util.Map
+ns_libs | ERROR in naming-types you cannot use a name already referred from another namespace | (thrown-with-msg? IllegalStateException (corten.kernel/regexp "String already refers to: class java.lang.String") (definterface String))
+ns_libs | ERROR in refer-error-messages referring to something that does not exist | (thrown-with-msg? IllegalAccessError (corten.kernel/regexp "nonexistent-var does not exist") (refer temp-ns :only (quote (nonexistent-var))))
+ns_libs | ERROR in test-defrecord-deftype-err-msg | (thrown-with-cause-msg? clojure.lang.Compiler$CompilerException (corten.kernel/regexp "defrecord and deftype fields must be symbols, user\\.MyRecord had: :shutdown-fn") (eval (quote (defre...
+ns_libs | ERROR in test-defrecord-deftype-err-msg | (thrown-with-cause-msg? clojure.lang.Compiler$CompilerException (corten.kernel/regexp "defrecord and deftype fields must be symbols, user\\.MyType had: :key1") (eval (quote (deftype MyType...
+ns_libs | FAIL in naming-types you cannot use a name already referred from another namespace | (thrown-with-msg? IllegalStateException (corten.kernel/regexp "Integer already refers to: class java.lang.Integer") (defrecord Integer []))
+ns_libs | FAIL in naming-types you cannot use a name already referred from another namespace | (thrown-with-msg? IllegalStateException (corten.kernel/regexp "StringBuffer already refers to: class java.lang.StringBuffer") (deftype StringBuff...
+ns_libs | FAIL in refer-error-messages referring to something non-public | (thrown-with-msg? IllegalAccessError (corten.kernel/regexp "hidden-var is not public") (refer temp-ns :only (quote (hidden-var))))
+ns_libs | FAIL in require-as-alias-then-load-later | (nil? (resolve (quote alias-now/example)))
+ns_libs | FAIL in test-alias | (thrown-with-msg? Exception (corten.kernel/regexp "No namespace: epicfail found") (alias (quote bogus) (quote epicfail)))
+ns_libs | FAIL in test-require | (thrown? Exception (require :foo))
+ns_libs | FAIL in test-require | (thrown? Exception (require))
+ns_libs | FAIL in test-use | (thrown? Exception (use :foo))
+ns_libs | FAIL in test-use | (thrown? Exception (use))
+ns_libs | LOAD ERROR in (deftest require-as-alias) - Unable to resolve var: clojure.set/union
+numbers | ERROR in Coerced-BigDecimal | nil
+numbers | ERROR in comparisons | nil
+numbers | ERROR in test-arbitrary-precision-subtract | (= clojure.lang.BigInt (class (-' 0 -9223372036854775808)))
+numbers | ERROR in test-arbitrary-precision-subtract | (= java.lang.Long (class (-' 0 -9223372036854775807)))
+numbers | ERROR in test-expected-casts | nil
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. -1.0) (min (Float. -1.0) (Float. 0.0))) (= (Float. 0.0) (max (Float. -1.0) (Float. 0.0))) (= -1.0 (min -1.0 0.0)) (= 0.0 (max -1.0 0.0)))
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. -1.0) (min (Float. -1.0) (Float. 1.0) (Float. 0.0))) (= (Float. 1.0) (max (Float. -1.0) (Float. 1.0) (Float. 0.0))) (= -1.0 (min -1.0 1.0 0...
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. -1.0) (min (Float. 0.0) (Float. -1.0) (Float. 1.0))) (= (Float. 1.0) (max (Float. 0.0) (Float. -1.0) (Float. 1.0))) (= -1.0 (min 0.0 -1.0 1...
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. -1.0) (min (Float. 0.0) (Float. -1.0))) (= (Float. 0.0) (max (Float. 0.0) (Float. -1.0))) (= -1.0 (min 0.0 -1.0)) (= 0.0 (max 0.0 -1.0)))
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. -1.0) (min (Float. 0.0) (Float. 1.0) (Float. -1.0))) (= (Float. 1.0) (max (Float. 0.0) (Float. 1.0) (Float. -1.0))) (= -1.0 (min 0.0 1.0 -1...
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. 0.0) (min (Float. 0.0) (Float. 1.0))) (= (Float. 1.0) (max (Float. 0.0) (Float. 1.0))) (= 0.0 (min 0.0 1.0)) (= 1.0 (max 0.0 1.0)))
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. 0.0) (min (Float. 0.0))) (= (Float. 0.0) (max (Float. 0.0))) (= 0.0 (min 0.0)) (= 0.0 (max 0.0)))
+numbers | ERROR in test-min-max min/max on different numbers of floats and doubles | (and (= (Float. 0.0) (min (Float. 1.0) (Float. 0.0))) (= (Float. 1.0) (max (Float. 1.0) (Float. 0.0))) (= 0.0 (min 1.0 0.0)) (= 1.0 (max 1.0 0.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Double (class (max 1 2 10.0 3 4 5)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Double (class (min 1 2 -10.0 3 4 5)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (max 1.0 10 2.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (max 1.0 10)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (max 1.0 2.0 10)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (max 10 1.0 2.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (max 10 1.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (max 10)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (min -10 1.0 2.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (min -10 1.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (min 1.0 -10 2.0)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (min 1.0 -10)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (min 1.0 2.0 -10)))
+numbers | ERROR in test-min-max min/max preserves type of winner | (= java.lang.Long (class (min 10)))
+numbers | ERROR in test-nan-as-operand | nil
+numbers | ERROR in test-nan-comparison | (= (< 1000 Double/NaN) (< 1000 (Double. Double/NaN)))
+numbers | ERROR in test-nan-comparison | (= (<= 1000 Double/NaN) (<= 1000 (Double. Double/NaN)))
+numbers | ERROR in test-nan-comparison | (= (> 1000 Double/NaN) (> 1000 (Double. Double/NaN)))
+numbers | ERROR in test-nan-comparison | (= (>= 1000 Double/NaN) (>= 1000 (Double. Double/NaN)))
+numbers | ERROR in test-pos?-zero?-neg? | nil
+numbers | ERROR in unchecked-add-overflow adding min value to min value results in zero | (= 0 (unchecked-add (Long/valueOf Long/MIN_VALUE) (Long/valueOf Long/MIN_VALUE)))
+numbers | ERROR in unchecked-add-overflow adding min value to min value results in zero | (= 0 (unchecked-add (Long/valueOf Long/MIN_VALUE) Long/MIN_VALUE))
+numbers | ERROR in unchecked-add-overflow adding min value to min value results in zero | (= 0 (unchecked-add Long/MIN_VALUE (Long/valueOf Long/MIN_VALUE)))
+numbers | ERROR in unchecked-add-overflow max value overflows to min value | (= Long/MIN_VALUE (unchecked-add (Long/valueOf Long/MAX_VALUE) (Long/valueOf 1)))
+numbers | ERROR in unchecked-add-overflow max value overflows to min value | (= Long/MIN_VALUE (unchecked-add (Long/valueOf Long/MAX_VALUE) 1))
+numbers | ERROR in unchecked-add-overflow max value overflows to min value | (= Long/MIN_VALUE (unchecked-add Long/MAX_VALUE (Long/valueOf 1)))
+numbers | ERROR in unchecked-dec-overflow min value overflows to max value | (= Long/MAX_VALUE (unchecked-dec (Long/valueOf Long/MIN_VALUE)))
+numbers | ERROR in unchecked-inc-overflow max value overflows to min value | (= Long/MIN_VALUE (unchecked-inc (Long/valueOf Long/MAX_VALUE)))
+numbers | ERROR in unchecked-multiply-overflow two times max value results in -2 | (= -2 (unchecked-multiply (Long/valueOf Long/MAX_VALUE) (Long/valueOf 2)))
+numbers | ERROR in unchecked-multiply-overflow two times max value results in -2 | (= -2 (unchecked-multiply (Long/valueOf Long/MAX_VALUE) 2))
+numbers | ERROR in unchecked-multiply-overflow two times max value results in -2 | (= -2 (unchecked-multiply Long/MAX_VALUE (Long/valueOf 2)))
+numbers | ERROR in unchecked-multiply-overflow two times min value results in 0 | (= 0 (unchecked-multiply (Long/valueOf Long/MIN_VALUE) (Long/valueOf 2)))
+numbers | ERROR in unchecked-multiply-overflow two times min value results in 0 | (= 0 (unchecked-multiply (Long/valueOf Long/MIN_VALUE) 2))
+numbers | ERROR in unchecked-multiply-overflow two times min value results in 0 | (= 0 (unchecked-multiply Long/MIN_VALUE (Long/valueOf 2)))
+numbers | ERROR in unchecked-negate-overflow negating min value overflows to min value itself | (= Long/MIN_VALUE (unchecked-negate (Long/valueOf Long/MIN_VALUE)))
+numbers | ERROR in unchecked-subtract-overflow min value overflows to max-value | (= Long/MAX_VALUE (unchecked-subtract (Long/valueOf Long/MIN_VALUE) (Long/valueOf 1)))
+numbers | ERROR in unchecked-subtract-overflow min value overflows to max-value | (= Long/MAX_VALUE (unchecked-subtract (Long/valueOf Long/MIN_VALUE) 1))
+numbers | ERROR in unchecked-subtract-overflow min value overflows to max-value | (= Long/MAX_VALUE (unchecked-subtract Long/MIN_VALUE (Long/valueOf 1)))
+numbers | ERROR in unchecked-subtract-overflow negating min value overflows to min value itself | (= Long/MIN_VALUE (unchecked-subtract (Long/valueOf 0) (Long/valueOf Long/MIN_VALUE)))
+numbers | ERROR in unchecked-subtract-overflow negating min value overflows to min value itself | (= Long/MIN_VALUE (unchecked-subtract (Long/valueOf 0) Long/MIN_VALUE))
+numbers | ERROR in unchecked-subtract-overflow negating min value overflows to min value itself | (= Long/MIN_VALUE (unchecked-subtract 0 (Long/valueOf Long/MIN_VALUE)))
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in equality-tests | (equal-var val1 val2)
+numbers | FAIL in warn-on-boxed | (clojure.core/= true (clojure.core/boolean (clojure.core/re-find (corten.kernel/regexp "^Boxed math warning") (clojure.test-helper/with-err-string-writer (clojure.test-helper/eval-in-temp-ns ((fn* [p1__N#] ...
+numbers | FAIL in warn-on-boxed | (clojure.core/= true (clojure.core/boolean (clojure.core/re-find (corten.kernel/regexp "^Boxed math warning") (clojure.test-helper/with-err-string-writer (clojure.test-helper/eval-in-temp-ns (> (first (rang...
+numbers | LOAD ERROR in (def expected-casts) - No such namespace: Byte/MAX_VALUE
+numbers | LOAD ERROR in (defn integer) - No such namespace: gen/one-of
+numbers | LOAD ERROR in (defspec addition-undoes-subtraction) - Var #'clojure.test-clojure.numbers/addition-undoes-subtraction is unbound
+numbers | LOAD ERROR in (defspec integer-associative-laws) - Var #'clojure.test-clojure.numbers/integer-associative-laws is unbound
+numbers | LOAD ERROR in (defspec integer-commutative-laws) - Var #'clojure.test-clojure.numbers/integer-commutative-laws is unbound
+numbers | LOAD ERROR in (defspec integer-distributive-laws) - Var #'clojure.test-clojure.numbers/integer-distributive-laws is unbound
+numbers | LOAD ERROR in (defspec quotient-and-remainder) - Var #'clojure.test-clojure.numbers/quotient-and-remainder is unbound
+numbers | LOAD ERROR in (deftest BigInteger-conversions) - No such namespace: Float/MAX_VALUE
+numbers | LOAD ERROR in (deftest clj-868) - No such namespace: Float/isNaN
+numbers | LOAD ERROR in (deftest test-add) - No such namespace: Integer/MAX_VALUE
+numbers | LOAD ERROR in (deftest test-array-types) - No such namespace: Class/forName
+numbers | LOAD ERROR in (deftest test-multiply) - No such namespace: Integer/MAX_VALUE
+numbers | LOAD ERROR in (deftest test-subtract) - No such namespace: Integer/MIN_VALUE
+numbers | LOAD ERROR in (deftest unchecked-cast-num-obj) - No such namespace: Byte/MAX_VALUE
+numbers | LOAD ERROR in (deftest unchecked-cast-num-prim) - No such namespace: Byte/MAX_VALUE
+numbers | SKIPPED require [clojure.data.generators :as gen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+numbers | SKIPPED use [clojure.test.generative :exclude (is)] - Could not locate clojure/test/generative.clj, .cljc or .cljs on the load path
+parallel | ERROR in future-fn-properly-retains-conveyed-bindings | nil
+parallel | ERROR in pmap-does-its-thing | (= (quote (1)) (pmap inc [0]))
+parse | ERROR in test-parse-double | (Double/isNaN (parse-double "NaN"))
+parse | ERROR in test-parse-uuid | (parse-uuid (.toString (UUID/randomUUID)))
+parse | LOAD ERROR in (deftest test-gen-parse-double) - No such namespace: chk/quick-check
+parse | LOAD ERROR in (deftest test-gen-parse-long) - No such namespace: chk/quick-check
+parse | SKIPPED import [java.util UUID] - Could not locate java/util.clj, .cljc or .cljs on the load path
+parse | SKIPPED require [clojure.test.check :as chk] - No value supplied for key: core
+parse | SKIPPED require [clojure.test.check.generators :as gen] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+parse | SKIPPED require [clojure.test.check.properties :as prop] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+pprint | LOAD ERROR in (load "pprint/test_cl_format") - Var #'clojure.test-clojure.pprint/d-tests is unbound
+pprint | LOAD ERROR in (load "pprint/test_pretty") - Var #'clojure.test-clojure.pprint/xp-fill-test is unbound
+pprint | SKIPPED use clojure.test-clojure.pprint.test-helper - Unable to resolve symbol: java.util.regex.Pattern
+predicates | ERROR in test-preds | nil
+predicates | ERROR in test-string?-more | (not (string? (new java.lang.StringBuffer "xyz")))
+predicates | ERROR in test-string?-more | (not (string? (new java.lang.StringBuilder "abc")))
+predicates | ERROR in test-type-preds | nil
+predicates | LOAD ERROR in (def pred-val-table) - Unable to resolve symbol: java.util.Date
+predicates | LOAD ERROR in (def sample-data) - Unable to resolve symbol: java.util.Date
+predicates | LOAD ERROR in (def type-preds) - Var #'clojure.test-clojure.predicates/class? is unbound
+predicates | LOAD ERROR in (deftest test-double-preds) - No such namespace: Float/parseFloat
+printer | ERROR in print-meta | (binding [*print-meta* true] (let [pstr (pr-str (var pr-str))] (and (.endsWith pstr "#'clojure.core/pr-str") (.startsWith pstr "^") (.contains pstr (pr-str (meta (var pr-str)))))))
+printer | ERROR in print-meta | (binding [*print-meta* true] (let [pstr (pr-str (var var-with-meta))] (and (.endsWith pstr "#'clojure.test-clojure.printer/var-with-meta") (.startsWith pstr "^") (.contains pstr (pr-str (meta (var var-with-me...
+printer | ERROR in print-meta | (binding [*print-meta* true] (let [pstr (pr-str (var var-with-type))] (and (.endsWith pstr "#'clojure.test-clojure.printer/var-with-type") (.startsWith pstr "^") (.contains pstr (pr-str (meta (var var-with-ty...
+printer | FAIL in print-dup-readable | (let [x "hi"] (= x (read-string (binding [*print-dup* true] (print-str x)))))
+printer | LOAD ERROR in (deftest print-dup-expected) - Unable to resolve symbol: java.math.BigInteger
+printer | LOAD ERROR in (deftest print-ns-maps) - Unable to resolve symbol: java.util.Date
+printer | LOAD ERROR in (deftest print-symbol-values) - No such namespace: Float/POSITIVE_INFINITY
+printer | LOAD ERROR in (deftest print-throwable) - Unable to resolve var: *data-readers*
+protocols | ERROR in defrecord-acts-like-a-map | (.equals (r 1 3 {} {:c 4}) (merge rec {:b 3, :c 4}))
+protocols | ERROR in defrecord-acts-like-a-map | (.equals {:a 11, :b 2, :c 10} (merge-with + rec {:a 10, :c 10}))
+protocols | ERROR in defrecord-acts-like-a-map | (.equals {:foo 1, :b 2} (set/rename-keys rec {:a :foo}))
+protocols | ERROR in defrecord-interfaces-test IPersistentCollection .cons | (= (r 1 3) (.cons rec {:b 3}))
+protocols | ERROR in defrecord-interfaces-test IPersistentCollection .cons | (= (r 1 4) (.cons rec [:b 4]))
+protocols | ERROR in defrecord-interfaces-test IPersistentCollection .cons | (= (r 1 5) (.cons rec (MapEntry. :b 5)))
+protocols | ERROR in defrecord-interfaces-test IPersistentCollection .cons | (= rec (.cons rec nil))
+protocols | ERROR in defrecord-interfaces-test IPersistentCollection .cons | (= rec (.cons rec {}))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (.containsKey rec :a)
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (.containsValue rec 1)
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (.isEmpty (EmptyRecord.))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (= #{1 2} (set (.values rec)))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (= #{:a :b} (.keySet rec))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (= #{[:a 1] [:b 2]} (.entrySet rec))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (= 1 (.get rec :a))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (= 2 (.size rec))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (= 3 (.size (assoc rec :c 3)))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (not (.containsKey rec :c))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (not (.containsValue rec 3))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (not (.isEmpty rec))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (thrown? UnsupportedOperationException (.clear rec))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (thrown? UnsupportedOperationException (.put rec :a 1))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (thrown? UnsupportedOperationException (.putAll rec {}))
+protocols | ERROR in defrecord-interfaces-test java.util.Map | (thrown? UnsupportedOperationException (.remove rec :a))
+protocols | ERROR in degenerate-defrecord-test | (not (.containsValue empty :a))
+protocols | ERROR in extend-test | nil
+protocols | FAIL in illegal-extending you cannot extend a protocol to a type that implements the protocol inline | (fails-with-cause? IllegalArgumentException (corten.kernel/regexp ".*HasProtocolInline already directly implements interface"...
+protocols | FAIL in illegal-extending you cannot extend to an interface | (fails-with-cause? IllegalArgumentException (corten.kernel/regexp "interface clojure.test_clojure.protocols.examples.ExampleProtocol is not a protocol") (eval (quote ...
+protocols | LOAD ERROR in (defn reload-example-protocols) - Unable to resolve var: clojure.test-clojure.protocols.examples/ExampleProtocol
+protocols | LOAD ERROR in (defrecord MapEntry) - Not a protocol: java.util.Map$Entry
+protocols | LOAD ERROR in (deftest marker-tests) - Unable to resolve symbol: clojure.test_clojure.protocols.examples.MarkerProtocol
+protocols | LOAD ERROR in (deftest protocols-test) - Unable to resolve var: ExampleProtocol
+protocols | LOAD ERROR in (deftype ExtendsTestWidget) - Not a protocol: ExampleProtocol
+protocols | LOAD ERROR in (deftype HasMarkers) - Not a protocol: ExampleProtocol
+protocols | LOAD ERROR in (deftype HasProtocolInline) - Not a protocol: ExampleProtocol
+protocols | LOAD ERROR in (deftype SatisfiesTestWidget) - Not a protocol: ExampleProtocol
+protocols | LOAD ERROR in (deftype WillGetMarker) - Not a protocol: ExampleProtocol
+protocols | LOAD ERROR in (extend-type WillGetMarker) - Not a protocol: MarkerProtocol
+protocols | SKIPPED import [clojure.test_clojure.protocols.examples ExampleInterface] - Cyclic load dependency: /home/nas/pkg/clojure/test/clojure/test_clojure/protocols/examples.clj is being loaded
+protocols | SKIPPED use clojure.test-clojure.protocols.examples - Var #'clojure.test-clojure.protocols.examples/ExampleInterface is unbound
+reader | ERROR in Numbers | (and (instance? Double ##NaN) (.isNaN ##NaN))
+reader | ERROR in Numbers | (instance? BigDecimal -0.0)
+reader | ERROR in Numbers | (instance? BigDecimal -0.0)
+reader | ERROR in Numbers | (instance? BigDecimal -0.0)
+reader | ERROR in Numbers | (instance? BigDecimal -0.1)
+reader | ERROR in Numbers | (instance? BigDecimal -0.1)
+reader | ERROR in Numbers | (instance? BigDecimal -0.1)
+reader | ERROR in Numbers | (instance? BigDecimal -1.0)
+reader | ERROR in Numbers | (instance? BigDecimal -1.0)
+reader | ERROR in Numbers | (instance? BigDecimal -1.0)
+reader | ERROR in Numbers | (instance? BigDecimal -10.0)
+reader | ERROR in Numbers | (instance? BigDecimal -10.0)
+reader | ERROR in Numbers | (instance? BigDecimal -10.0)
+reader | ERROR in Numbers | (instance? BigDecimal -10.0)
+reader | ERROR in Numbers | (instance? BigDecimal -10.0)
+reader | ERROR in Numbers | (instance? BigDecimal -10.0)
+reader | ERROR in Numbers | (instance? BigDecimal -2.147483648E9)
+reader | ERROR in Numbers | (instance? BigDecimal -9.223372036854776E18)
+reader | ERROR in Numbers | (instance? BigDecimal 0.0)
+reader | ERROR in Numbers | (instance? BigDecimal 0.0)
+reader | ERROR in Numbers | (instance? BigDecimal 0.0)
+reader | ERROR in Numbers | (instance? BigDecimal 0.0)
+reader | ERROR in Numbers | (instance? BigDecimal 0.0)
+reader | ERROR in Numbers | (instance? BigDecimal 0.0)
+reader | ERROR in Numbers | (instance? BigDecimal 0.1)
+reader | ERROR in Numbers | (instance? BigDecimal 0.1)
+reader | ERROR in Numbers | (instance? BigDecimal 0.1)
+reader | ERROR in Numbers | (instance? BigDecimal 0.1)
+reader | ERROR in Numbers | (instance? BigDecimal 0.1)
+reader | ERROR in Numbers | (instance? BigDecimal 0.1)
+reader | ERROR in Numbers | (instance? BigDecimal 1.0)
+reader | ERROR in Numbers | (instance? BigDecimal 1.0)
+reader | ERROR in Numbers | (instance? BigDecimal 1.0)
+reader | ERROR in Numbers | (instance? BigDecimal 1.0)
+reader | ERROR in Numbers | (instance? BigDecimal 1.0)
+reader | ERROR in Numbers | (instance? BigDecimal 1.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 10.0)
+reader | ERROR in Numbers | (instance? BigDecimal 2.147483647E9)
+reader | ERROR in Numbers | (instance? BigDecimal 9.223372036854776E18)
+reader | ERROR in Strings | nil
+reader | ERROR in Symbols | (instance? clojure.lang.Symbol (quote alphabet))
+reader | ERROR in preserve-read-cond-test | nil
+reader | ERROR in set-line-number | nil
+reader | ERROR in t-Characters | nil
+reader | ERROR in t-Explicit-line-column-numbers | (= {:line 1, :column 99} (-> "^{:column 99} (1 2)" str->lnpr read meta (select-keys [:line :column])))
+reader | ERROR in t-Explicit-line-column-numbers | (= {:line 42, :column 99} (-> "^{:line 42 :column 99} (1 2)" str->lnpr read meta (select-keys [:line :column])))
+reader | ERROR in t-Explicit-line-column-numbers | nil
+reader | ERROR in t-Keywords | (instance? clojure.lang.Keyword :alphabet)
+reader | ERROR in test-read+string | nil
+reader | FAIL in namespaced-map-errors | (thrown-with-msg? Exception (corten.kernel/regexp "Duplicate key: :user/a") (read-string "#::{:a 1 :a 2}"))
+reader | FAIL in namespaced-map-errors | (thrown-with-msg? Exception (corten.kernel/regexp "Duplicate key: user/a") (read-string "#::{a 1 a 2}"))
+reader | FAIL in namespaced-map-errors | (thrown-with-msg? Exception (corten.kernel/regexp "Invalid token") (read-string "#:::"))
+reader | FAIL in namespaced-map-errors | (thrown-with-msg? Exception (corten.kernel/regexp "Namespaced map literal must contain an even number of forms") (read-string "#:s{1}"))
+reader | FAIL in namespaced-map-errors | (thrown-with-msg? Exception (corten.kernel/regexp "Namespaced map must specify a namespace") (read-string "#: s{:a 1}"))
+reader | FAIL in namespaced-map-errors | (thrown-with-msg? Exception (corten.kernel/regexp "Namespaced map must specify a valid namespace") (read-string "#:s/t{1 2}"))
+reader | FAIL in reading-keywords | (thrown-with-msg? Exception (corten.kernel/regexp "Invalid token: foo:") (read-string "foo:"))
+reader | FAIL in t-Anonymous-function-literal | (thrown? RuntimeException (read-string "#(list %#_(first arg)1.00000001 %#_(secong arg)2r10 %#_(rest arg)-1.5)"))
+reader | FAIL in t-Anonymous-function-literal | (thrown? RuntimeException (read-string "#(vector %%)"))
+reader | FAIL in t-Anonymous-function-literal | (thrown? RuntimeException (read-string "#(vector %-0.2)"))
+reader | FAIL in t-Anonymous-function-literal | (thrown? RuntimeException (read-string "#(vector %1.5)"))
+reader | FAIL in t-Anonymous-function-literal | (thrown? RuntimeException (read-string "#(vector %1/2)"))
+reader | FAIL in t-Anonymous-function-literal | (thrown? RuntimeException (read-string "#(vector %3M)"))
+reader | LOAD ERROR in (defn str->lnpr) - Unable to resolve symbol: java.io.StringReader
+reader | LOAD ERROR in (defn temp-file) - No such namespace: File/createTempFile
+reader | LOAD ERROR in (defspec types-that-need-dup-to-roundtrip) - Var #'clojure.test-clojure.reader/types-that-need-dup-to-roundtrip is unbound
+reader | LOAD ERROR in (defspec types-that-should-roundtrip) - Var #'clojure.test-clojure.reader/types-that-should-roundtrip is unbound
+reader | LOAD ERROR in (deftest Instants) - Unable to resolve symbol: java.util.Date
+reader | LOAD ERROR in (deftest UUID) - Unable to resolve symbol: java.util.UUID
+reader | LOAD ERROR in (deftest eof-option) - Unable to resolve symbol: java.io.StringReader
+reader | LOAD ERROR in (deftest reader-conditionals) - Wrong number of args (2) passed to: clojure.core/nil?
+reader | LOAD ERROR in (deftest t-line-column-numbers) - Unable to resolve symbol: java.io.StringReader
+reader | LOAD ERROR in (deftest unicode-in-tagged) - Unable to resolve var: *data-readers*
+reader | LOAD ERROR in (deftest unknown-tag) - Unable to resolve var: *data-readers*
+reader | SKIPPED import [clojure.lang BigInt Ratio] - refer: BigInt does not exist
+reader | SKIPPED import java.io.File - Could not locate java/io.clj, .cljc or .cljs on the load path
+reader | SKIPPED import java.util.TimeZone - Could not locate java/util.clj, .cljc or .cljs on the load path
+reader | SKIPPED require [clojure.test-clojure.generators :as cgen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+reader | SKIPPED require [clojure.test.generative :refer (defspec)] - Could not locate clojure/test/generative.clj, .cljc or .cljs on the load path
+reader | SKIPPED use [clojure.instant :only [read-instant-date read-instant-calendar read-instant-timestamp]] - Could not locate clojure/instant.clj, .cljc or .cljs on the load path
+reducers | ERROR in test-mapcat-obeys-reduced | (= [1 "0" 2 "1" 3] (->> (concat (range 100) (lazy-seq (throw (Exception. "Too eager")))) (r/mapcat (juxt inc str)) (r/take 5) (into [])))
+reducers | LOAD ERROR in (defn gen-num) - No such namespace: gen/uniform
+reducers | LOAD ERROR in (defspec reduced-always-returns) - Var #'clojure.test-clojure.reducers/reduced-always-returns is unbound
+reducers | SKIPPED require [clojure.data.generators :as gen] - Could not locate clojure/data/generators.clj, .cljc or .cljs on the load path
+reducers | SKIPPED require [clojure.test.generative :refer (defspec)] - Could not locate clojure/test/generative.clj, .cljc or .cljs on the load path
+repl | FAIL in test-doc with namespaces | (= "clojure.pprint" (second (str/split-lines (with-out-str (doc clojure.pprint)))))
+rt | ERROR in binding-root-clears-macro-metadata | nil
+rt | ERROR in error-messages reflection cannot resolve static method | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to static method valueOf on java\\.lang\\.Integer can't be resolved \\(argument t...
+rt | ERROR in error-messages reflection cannot resolve static method | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to static method valueOf on java\\.lang\\.Integer can't be resolved \\(argument t...
+rt | ERROR in ns-intern-policies | nil
+rt | ERROR in rt-print-prior-to-print-initialize pattern literals | (= "#\"foo\"" (bare-rt-print (corten.kernel/regexp "foo")))
+rt | FAIL in error-messages binding a core var that already refers to something | (clojure.core/re-matches (corten.kernel/regexp "WARNING: prefers already refers to: #'clojure.core/prefers in namespace: .*\\r?\\n") (clojure.test-helper/with...
+rt | FAIL in error-messages binding a core var that already refers to something | (clojure.core/re-matches (corten.kernel/regexp "WARNING: prefers already refers to: #'clojure.core/prefers in namespace: .*\\r?\\n") (clojure.test-helper/with...
+rt | FAIL in error-messages reflection cannot resolve constructor | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to java\\.lang\\.String ctor can't be resolved\\.\\r?\\n") (clojure.test-helper/with...
+rt | FAIL in error-messages reflection cannot resolve constructor | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to java\\.lang\\.String ctor can't be resolved\\.\\r?\\n") (clojure.test-helper/with...
+rt | FAIL in error-messages reflection cannot resolve field on known class | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - reference to field blah on java\\.lang\\.String can't be resolved\\.\\r?\\n") (c...
+rt | FAIL in error-messages reflection cannot resolve field on known class | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - reference to field blah on java\\.lang\\.String can't be resolved\\.\\r?\\n") (c...
+rt | FAIL in error-messages reflection cannot resolve field | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - reference to field blah can't be resolved\\.\\r?\\n") (clojure.test-helper/with-err-print-write...
+rt | FAIL in error-messages reflection cannot resolve field | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - reference to field blah can't be resolved\\.\\r?\\n") (clojure.test-helper/with-err-string-writ...
+rt | FAIL in error-messages reflection cannot resolve instance method because it has incompatible argument types | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method getBytes on java\\.lang\\.S...
+rt | FAIL in error-messages reflection cannot resolve instance method because it has incompatible argument types | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method getBytes on java\\.lang\\.S...
+rt | FAIL in error-messages reflection cannot resolve instance method because it has unknown argument types | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method getBytes on java\\.lang\\.String...
+rt | FAIL in error-messages reflection cannot resolve instance method because it has unknown argument types | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method getBytes on java\\.lang\\.String...
+rt | FAIL in error-messages reflection cannot resolve instance method because it is missing | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method zap on java\\.lang\\.String can't be resolved \\...
+rt | FAIL in error-messages reflection cannot resolve instance method because it is missing | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method zap on java\\.lang\\.String can't be resolved \\...
+rt | FAIL in error-messages reflection cannot resolve instance method because target class is unknown | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method zap can't be resolved \\(target class ...
+rt | FAIL in error-messages reflection cannot resolve instance method because target class is unknown | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method zap can't be resolved \\(target class ...
+rt | FAIL in error-messages reflection error prints correctly for nil arguments | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method divide on java\\.math\\.BigDecimal can't be resolved \\(argu...
+rt | FAIL in error-messages reflection error prints correctly for nil arguments | (clojure.core/re-matches (corten.kernel/regexp "Reflection warning, .*:\\d+:\\d+ - call to method divide on java\\.math\\.BigDecimal can't be resolved \\(argu...
+rt | FAIL in ns-intern-policies you can replace a core name, with warning | (string/starts-with? e1 "WARNING")
+rt | LOAD ERROR in (defn bare-rt-print) - No such namespace: clojure.lang.RT/print
+sequences | ERROR in range-test | nil
+sequences | ERROR in test-lazy-seq | (not (.equals (lazy-seq [3]) (lazy-seq [3N])))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-longrange-corners | (= (apply unlimited-range-create range-args) (apply range range-args))
+sequences | ERROR in test-range | (= (reduce + (iterator-seq (.iterator (range 0.0 100.0 1.0)))) 4950.0)
+sequences | ERROR in test-range | (= (reduce + (iterator-seq (.iterator (range 100)))) 4950)
+sequences | ERROR in test-range | (= (take 3 (range Long/MAX_VALUE Double/POSITIVE_INFINITY)) (quote (9223372036854775807 9223372036854775808N 9223372036854775809N)))
+sequences | ERROR in test-seq | (not (.equals (seq [3]) (seq [3N])))
+sequences | LOAD ERROR in (defn unlimited-range-create) - No such namespace: clojure.lang.Range/create
+sequences | LOAD ERROR in (defspec iteration-seq-equals-reduce) - No such namespace: prop/for-all
+sequences | LOAD ERROR in (defspec longrange-equals-range) - No such namespace: prop/for-all
+sequences | LOAD ERROR in (deftest reduce-with-varying-impls) - Unable to resolve symbol: java.util.ArrayList
+sequences | LOAD ERROR in (deftest test-ArrayIter) - No such namespace: clojure.lang.ArrayIter/createFromObject
+sequences | LOAD ERROR in (deftest test-into-IReduceInit) - Not a protocol: clojure.lang.IReduceInit
+sequences | LOAD ERROR in (deftest test-iteration) - No such namespace: java.nio.file.Files/newBufferedReader
+sequences | LOAD ERROR in (deftest test-nth) - Unable to resolve symbol: java.util.ArrayList
+sequences | LOAD ERROR in (deftest test-reduce) - No such namespace: Integer/TYPE
+sequences | LOAD ERROR in (deftest test-seqs-implements-iobj) - No such namespace: clojure.lang.PersistentQueue/EMPTY
+sequences | SKIPPED import clojure.lang.IReduce - refer: IReduce does not exist
+sequences | SKIPPED require [clojure.test.check.clojure-test :refer (defspec)] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+sequences | SKIPPED require [clojure.test.check.generators :as gen] - No value supplied for key: core
+sequences | SKIPPED require [clojure.test.check.properties :as prop] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+special | ERROR in quote-with-multiple-args | (= (quote (quote 1 2 3)) (-> ex (.getCause) (ex-data) (:form)))
+special | ERROR in quote-with-multiple-args | (thrown? clojure.lang.Compiler$CompilerException (eval (quote (quote 1 2 3))))
+special | FAIL in amp-not-allowed-as-let-or-loop*-binding-name | (thrown? Exception (eval (quote (let [& 42] &))))
+special | FAIL in amp-not-allowed-as-let-or-loop*-binding-name | (thrown? Exception (eval (quote (let* [& 42] &))))
+special | FAIL in amp-not-allowed-as-let-or-loop*-binding-name | (thrown? Exception (eval (quote (loop* [& 42] &))))
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in binding-types-not-allowed | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (corten.kernel/concat (corten.kernel/list (quote clojure.core/let)) (corten.kernel/list (corten.kernel/ve...
+special | FAIL in keywords-not-allowed-in-let-bindings | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (quote (let [:a 1] a))))
+special | FAIL in keywords-not-allowed-in-let-bindings | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (quote (let [:a/b 1] b))))
+special | FAIL in keywords-not-allowed-in-let-bindings | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (quote (let [[:a/b] [1]] b))))
+special | FAIL in keywords-not-allowed-in-let-bindings | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (quote (let [[:a] [1]] a))))
+special | FAIL in namespaced-syms-only-allowed-in-map-destructuring | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (quote (let [[a/x] [1]] x))))
+special | FAIL in namespaced-syms-only-allowed-in-map-destructuring | (thrown-with-cause-msg? Exception (corten.kernel/regexp "did not conform to spec") (eval (quote (let [a/x 1 [y] [1]] x))))
+special | FAIL in or-doesnt-create-bindings | (thrown-with-cause-msg? Exception (corten.kernel/regexp "Unable to resolve symbol: b") (eval (quote (let [{:keys [a], :or {b 2}} {:a 1}] [a b]))))
+string | ERROR in char-sequence-handling | (let [[s & more] ["the end\r\n\r\r\n"]] (= "the end" (apply s/trim-newline (StringBuffer. s) more)))
+tap | ERROR in capture-tapped-threaded | nil
+test | ERROR in can-catch-unexpected-exceptions | (= 1 (throw (Exception.)))
+test | ERROR in can-test-instance | (instance? Float (+ 1 1))
+test | ERROR in can-test-thrown | (thrown? ArithmeticException (throw (RuntimeException.)))
+test | ERROR in can-test-thrown-with-msg | (thrown-with-msg? IllegalArgumentException (corten.kernel/regexp "Divide by zero") (/ 1 0))
+test | ERROR in clj-1588-symbols-in-are-isolated-from-test-clauses | nil
+test | FAIL in can-test-= | (= 3 (+ 2 2))
+test | FAIL in can-test-anonymous-fn | ((fn* [p1__N#] (.startsWith p1__N# "d")) "abc")
+test | FAIL in can-test-boolean | false
+test | FAIL in can-test-method-call | (.startsWith "abc" "d")
+test | FAIL in can-test-nil | nil
+test | FAIL in can-test-regexps | (re-find (corten.kernel/regexp "cd") "abbabba")
+test | FAIL in can-test-regexps | (re-matches (corten.kernel/regexp "^cd.*$") "abbabba")
+test | FAIL in can-test-symbol | x
+test | FAIL in can-test-thrown | (thrown? Exception (+ 1 1))
+test | FAIL in can-test-thrown-with-msg | (thrown-with-msg? ArithmeticException (corten.kernel/regexp "Something else") (/ 1 0))
+test | FAIL in can-test-thrown-with-msg | (thrown? Exception (+ 1 1))
+test | LOAD ERROR in (deftest clj-1102-empty-stack-trace-should-not-throw-exceptions) - No such namespace: Class/forName
+test_fixtures | ERROR in a-var-lacking-test-meta-should-not-trigger-fixtures | nil
+test_fixtures | ERROR in can-run-a-single-test-with-fixtures | nil
+transducers | FAIL in test-dedupe | (= (transduce (dedupe) conj [1 1.0 1.0 1N]) [1 1.0 1.0 1N])
+transducers | FAIL in test-distinct | (= [1] (sequence (distinct [1 1N])) (sequence (distinct) [1 1N]))
+transducers | LOAD ERROR in (def gen-action) - No such namespace: gen/one-of
+transducers | LOAD ERROR in (def gen-actions) - No such namespace: gen/vector
+transducers | LOAD ERROR in (def gen-coll) - No such namespace: gen/vector
+transducers | LOAD ERROR in (def gen-dedupe) - No such namespace: gen/return
+transducers | LOAD ERROR in (def gen-distinct) - No such namespace: gen/return
+transducers | LOAD ERROR in (def gen-drop) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-drop-while) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-filter) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-indexedfn) - No such namespace: gen/elements
+transducers | LOAD ERROR in (def gen-interpose) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-keep) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-keep-indexed) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-map) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-map-indexed) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-mapcat) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-mapcatfn) - No such namespace: gen/elements
+transducers | LOAD ERROR in (def gen-mapfn) - No such namespace: gen/elements
+transducers | LOAD ERROR in (def gen-partition-all) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-partition-by) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-predfn) - No such namespace: gen/elements
+transducers | LOAD ERROR in (def gen-remove) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-replace) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-take) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-take-nth) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def gen-take-while) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (def result-gen) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (defn literal) - No such namespace: gen/fmap
+transducers | LOAD ERROR in (deftest seq-and-transducer) - No such namespace: chk/quick-check
+transducers | LOAD ERROR in (deftest test-transduce) - No such namespace: Integer/TYPE
+transducers | SKIPPED require [clojure.test.check :as chk] - No value supplied for key: core
+transducers | SKIPPED require [clojure.test.check.clojure-test :as ctest] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check.cljc is being loaded
+transducers | SKIPPED require [clojure.test.check.generators :as gen] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+transducers | SKIPPED require [clojure.test.check.properties :as prop] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+transients | ERROR in empty-transient | (= false (.contains (transient #{}) :bogus-key))
+transients | ERROR in transient-mod-after-persistent | (thrown? IllegalAccessError (conj! t2 5))
+transients | ERROR in transient-mod-ok-across-threads | nil
+transients | FAIL in metadata-propagation-across-growing-transient-map | (= metam (meta (persistent! m)))
+transients | FAIL in metadata-propagation-across-growing-transient-map | (= metam (meta (persistent! m)))
+transients | FAIL in transient-lookups | (= [0 1] (find tv 0))
+transients | FAIL in transient-lookups | (= [:a 1] (find tam :a))
+transients | FAIL in transient-lookups | (= [:a 1] (find thm :a))
+transients | LOAD ERROR in (deftest fill-transient) - No such namespace: chk/quick-check
+transients | LOAD ERROR in (deftest fill-transient-adopt) - No such namespace: chk/quick-check
+transients | SKIPPED require [clojure.test.check :as chk] - No value supplied for key: core
+transients | SKIPPED require [clojure.test.check.generators :as gen] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+transients | SKIPPED require [clojure.test.check.properties :as prop] - Cyclic load dependency: /home/nas/agent-home/src/cormanlisp-rs/test.check/src/main/clojure/clojure/test/check/generators.cljc is being loaded
+try_catch | ERROR in catch-receives-checked-exception-from-reflective-call | (thrown-with-msg? ReflectorTryCatchFixture$Cookies (corten.kernel/regexp "Double") (fail 1.0))
+try_catch | ERROR in catch-receives-checked-exception-from-reflective-call | (thrown-with-msg? ReflectorTryCatchFixture$Cookies (corten.kernel/regexp "Long") (fail 1))
+try_catch | ERROR in catch-receives-checked-exception-from-reflective-call | (thrown-with-msg? ReflectorTryCatchFixture$Cookies (corten.kernel/regexp "Wrapped") (.failWithCause (make-instance) 1.0))
+try_catch | LOAD ERROR in (defn fail) - No such namespace: ReflectorTryCatchFixture/fail
+try_catch | LOAD ERROR in (deftest catch-receives-checked-exception-from-eval) - Unable to resolve symbol: java.io.FileNotFoundException
+try_catch | SKIPPED import [clojure.test ReflectorTryCatchFixture ReflectorTryCatchFixture$Cookies] - refer: ReflectorTryCatchFixture does not exist
+vars | ERROR in test-vars-apply-lazily | (= 0 (deref (future (apply (var sample) (range))) 1000 :timeout))
+vars | ERROR in test-vars-apply-lazily | (= 0 (deref (future (apply sample (range))) 1000 :timeout))
+vars | ERROR in test-with-local-vars | (= (factorial 5) 120)
+vars | ERROR in test-with-precision | (= (with-precision 4 (+ 3.5555555 1)) 4.556)
+vars | ERROR in test-with-precision | (= (with-precision 6 (+ 3.5555555 1)) 4.55556)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding CEILING (+ 3.5555555 1)) 4.55556)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding DOWN (+ 3.5555555 1)) 4.55555)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding FLOOR (+ 3.5555555 1)) 4.55555)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding HALF_DOWN (+ 3.5555555 1)) 4.55556)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding HALF_EVEN (+ 3.5555555 1)) 4.55556)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding HALF_UP (+ 3.5555555 1)) 4.55556)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding UNNECESSARY (+ 3.5555 1)) 4.5555)
+vars | ERROR in test-with-precision | (= (with-precision 6 :rounding UP (+ 3.5555555 1)) 4.55556)
+vars | ERROR in test-with-redefs | nil
+vars | ERROR in test-with-redefs-fn | nil
+vars | LOAD ERROR in (deftest test-settable-math-context) - No such namespace: clojure.main/with-bindings
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in empty-vector-equality | (.equals c1 c2)
+vectors | ERROR in test-empty-vector-spliterator | nil
+vectors | ERROR in test-reversed-vec | nil
+vectors | ERROR in test-spliterator-trySplit | nil
+vectors | ERROR in test-vec-associative Associative.containsKey | (.containsKey v 0)
+vectors | ERROR in test-vec-associative Associative.containsKey | (.containsKey v 1)
+vectors | ERROR in test-vec-associative Associative.containsKey | (.containsKey v 2)
+vectors | ERROR in test-vec-associative Associative.containsKey | (.containsKey v 3)
+vectors | ERROR in test-vec-associative Associative.containsKey | (.containsKey v 4)
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey empty-v 0))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey empty-v 1))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v ""))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v #{}))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v (corten.kernel/regexp "")))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v -1))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v -100))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v 100))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v 5))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v []))
+vectors | ERROR in test-vec-associative Associative.containsKey | (not (.containsKey v nil))
+vectors | ERROR in test-vec-associative Associative.entryAt | (= (clojure.lang.MapEntry. 0 1) (.entryAt v 0))
+vectors | ERROR in test-vec-associative Associative.entryAt | (= (clojure.lang.MapEntry. 2 3) (.entryAt v 2))
+vectors | ERROR in test-vec-associative Associative.entryAt | (= (clojure.lang.MapEntry. 4 5) (.entryAt v 4))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt empty-v 0))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt empty-v 1))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt v ""))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt v -1))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt v -5))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt v 10))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt v 5))
+vectors | ERROR in test-vec-associative Associative.entryAt | (nil? (.entryAt v nil))
+vectors | ERROR in test-vec-compare Comparable.compareTo equivalent | (= 0 (.compareTo int-vec (:standard long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo equivalent | (= 0 (.compareTo int-vec (:standard regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:empty int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:empty long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:empty regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:first-lesser int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:first-lesser long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:first-lesser regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:last-lesser int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:last-lesser long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:last-lesser regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-1 int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-1 long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-1 regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-2 int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-2 long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-2 regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-3 int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-3 long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:rand-lesser-3 regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:shorter int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:shorter long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo greater | (= 1 (.compareTo int-vec (:shorter regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo identical | (= 0 (.compareTo int-vec int-vec))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec #{}))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec (quote ())))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec (sorted-map)))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec (sorted-set)))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec 1))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec nums))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? ClassCastException (.compareTo int-vec {}))
+vectors | ERROR in test-vec-compare Comparable.compareTo incompatible | (thrown? NullPointerException (.compareTo int-vec nil))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:first-greater int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:first-greater long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:first-greater regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:last-greater int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:last-greater long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:last-greater regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:longer int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:longer long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:longer regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-1 int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-1 long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-1 regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-2 int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-2 long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-2 regular-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-3 int-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-3 long-vecs)))
+vectors | ERROR in test-vec-compare Comparable.compareTo lesser | (= -1 (.compareTo int-vec (:rand-greater-3 regular-vecs)))
+vectors | LOAD ERROR in (defn remember) - Not a protocol: Consumer
+vectors | LOAD ERROR in (deftest test-vec) - Not a protocol: clojure.lang.IReduceInit
+vectors | LOAD ERROR in (deftest test-vec-creation) - No such namespace: Float/TYPE
+vectors | LOAD ERROR in (deftest test-vecseq) - No such namespace: clojure.lang.PersistentList/EMPTY
+vectors | LOAD ERROR in (deftest test-vector-eqv-to-non-counted-types) - Unable to resolve symbol: java.util.ArrayList
+vectors | LOAD ERROR in (deftest test-vector-parallel-stream) - No such namespace: Collectors/counting
+vectors | SKIPPED import [java.util Collection Spliterator] - Could not locate java/util.clj, .cljc or .cljs on the load path
+vectors | SKIPPED import [java.util.function Consumer] - Could not locate java/util/function.clj, .cljc or .cljs on the load path
+vectors | SKIPPED import [java.util.stream Collectors] - Could not locate java/util/stream.clj, .cljc or .cljs on the load path

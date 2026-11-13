@@ -1,0 +1,269 @@
+apply_test | ERROR in js-fns-test | (identical? fn-returning-this (apply fn-returning-this [0]))
+apply_test | ERROR in meta-fn-test | (= (quote (1 2 3)) (.apply ctor nil (corten.kernel/array 1 2 3)))
+apply_test | ERROR in meta-fn-test | (= (range 30) (.apply ctor nil (to-array (range 30))))
+apply_test | ERROR in multi-arity-variadic-test | (= (range 30) (apply (fn ([a]) ([_ _ _ _ _ a b c d e _ _ _ _ _ f g h i j k _ _ _ _ _ & R] (let [a (array)] (copy-arguments a) (concat (.slice a 0 26) R)))) (range 30)))
+apply_test | ERROR in single-arity-variadic-test | (= (range 30) (apply (fn [_ _ _ _ _ a b c d e _ _ _ _ _ f g h i j k _ _ _ _ _ & R] (let [a (array)] (copy-arguments a) (concat (.slice a 0 26) R))) (range 30)))
+array_access_test | ERROR in aget-test | (== 1 (aget (corten.kernel/array (corten.kernel/array 1)) 0 "0"))
+array_access_test | ERROR in aget-test | (== 1 (aget (corten.kernel/array 1) "0"))
+array_access_test | ERROR in aget-test | (nil? (aget (corten.kernel/array (corten.kernel/array 1)) 0 -1))
+array_access_test | ERROR in aget-test | (nil? (aget (corten.kernel/array (corten.kernel/array 1)) 0 1))
+array_access_test | ERROR in aget-test | (nil? (aget (corten.kernel/array (corten.kernel/array)) 0 0))
+array_access_test | ERROR in aget-test | (nil? (aget (corten.kernel/array 1) -1))
+array_access_test | ERROR in aget-test | (nil? (aget (corten.kernel/array 1) 1))
+array_access_test | ERROR in aget-test | (nil? (aget (corten.kernel/array) 0))
+array_access_test | ERROR in aset-test | (= "x" (aset (corten.kernel/array (corten.kernel/array 1)) 0 "0" "x"))
+array_access_test | ERROR in aset-test | (= "x" (aset (corten.kernel/array (corten.kernel/array 1)) 0 -1 "x"))
+array_access_test | ERROR in aset-test | (= "x" (aset (corten.kernel/array 1) "0" "x"))
+array_access_test | ERROR in aset-test | (= "x" (aset (corten.kernel/array 1) -1 "x"))
+array_access_test | ERROR in aset-test | (= "x" (aset [1] 0 "x"))
+array_access_test | ERROR in checked-aget-test | (== 1 (checked-aget-alias (corten.kernel/array (corten.kernel/array 1)) 0 "0"))
+array_access_test | ERROR in checked-aget-test | (== 1 (checked-aget-alias (corten.kernel/array 1) "0"))
+array_access_test | ERROR in checked-aset-test | (= "x" (checked-aset-alias (corten.kernel/array (corten.kernel/array 1)) 0 "0" "x"))
+array_access_test | ERROR in checked-aset-test | (= "x" (checked-aset-alias (corten.kernel/array (corten.kernel/array 1)) 0 -1 "x"))
+array_access_test | ERROR in checked-aset-test | (= "x" (checked-aset-alias (corten.kernel/array 1) "0" "x"))
+array_access_test | ERROR in checked-aset-test | (= "x" (checked-aset-alias (corten.kernel/array 1) -1 "x"))
+array_access_test | ERROR in checked-aset-test | (= "x" (checked-aset-alias [1] 0 "x"))
+array_access_test | ERROR in unchecked-aget-test | (== 1 (unchecked-get (corten.kernel/array 1) "0"))
+array_access_test | ERROR in unchecked-set-test | (= "x" (unchecked-set (corten.kernel/array 1) "0" "x"))
+array_access_test | ERROR in unchecked-set-test | (= "x" (unchecked-set (corten.kernel/array 1) -1 "x"))
+array_access_test | ERROR in unchecked-set-test | (= "x" (unchecked-set [1] 0 "x"))
+array_access_test | FAIL in checked-aget-test | (thrown? js/Error (checked-aget-alias nil 1))
+array_access_test | FAIL in cljs-2861-test | (false? *unchecked-arrays*)
+array_access_test | FAIL in unchecked-aget-test | (thrown? js/Error (unchecked-get nil 1))
+array_access_test | LOAD ERROR in (deftest unchecked-arrays-file-scope-test) - No such namespace: alpha/unchecked-arrays?
+array_access_test | SKIPPED require [cljs.array-access.alpha :as alpha] - Var #'cljs.analyzer/unchecked-arrays? is unbound
+async_await_test | ERROR in async-test-error-reporting-test | nil
+async_await_test | ERROR in await-in-async-destructure | nil
+async_await_test | ERROR in await-in-do-test | nil
+async_await_test | ERROR in await-in-loop-test | nil
+async_await_test | ERROR in await-in-nested | (= 13 (await (f)))
+async_await_test | ERROR in await-in-throw-test | nil
+async_await_test | ERROR in await-let-fn-test | nil
+async_await_test | ERROR in await-with-aliases-or-renamed-and-via-macros-test | nil
+async_await_test | ERROR in await-with-ctor | (= (Date. 0) (await (f)))
+async_await_test | ERROR in await-with-if-test | (= :success (await (f)))
+async_await_test | ERROR in await-with-literals | (= #{:foo :bar :baz} (await (setf)))
+async_await_test | ERROR in await-with-literals | (= (quote (0 1 2)) (await (listf)))
+async_await_test | ERROR in await-with-literals | (= [0 1 2] (await (vectorf)))
+async_await_test | ERROR in await-with-literals | (= [0 1 2] (seq (await (arrayf))))
+async_await_test | ERROR in await-with-literals | (= {:foo :bar} (await (mapf)))
+async_await_test | ERROR in await-with-literals | (gobj/equals (corten.kernel/js-obj "foo" "bar") (await (objf)))
+async_await_test | ERROR in defn-test | nil
+async_await_test | ERROR in fn-test | nil
+async_await_test | ERROR in multi-arity-defn-test | nil
+async_await_test | ERROR in multi-arity-variadic-test | nil
+async_await_test | ERROR in varargs-fn-test | nil
+async_await_test | ERROR in variadic-defn-test | nil
+async_await_test | ERROR in variadic-fn-test | (= [1 1 [1 2] [1 2]] [(await (f 1)) (await (apply f [1])) (await (f 1 2)) (await (apply f [1 2]))])
+async_await_test | ERROR in variadic-varargs-fn-test | (= [1 1 [1 2 3] [1 2 3]] [(await (f 1)) (await (apply f [1])) (await (f 1 2 3)) (await (apply f [1 2 3]))])
+async_await_test | SKIPPED require [cljs.core :as cc :refer [await] :rename {await aw}] - refer: await does not exist
+binding_test | FAIL in test-tag-inference | (= 2 (bar-tagged))
+collections_test | ERROR in integerrange-equals-range | nil
+collections_test | ERROR in test-lazy-seq-realized? Testing LazySeq IPending | (not (realized? (nthrest xs 2)))
+collections_test | FAIL in test-range Testing Range | (= (reduce + (map inc (range 0 100 0.1))) 51051)
+collections_test | FAIL in test-range Testing Range | (= (reduce + (range 0.1 100)) 4960)
+collections_test | FAIL in test-range Testing Range | (= (reduce + 0 (map inc (range 0 100 0.1))) 51051)
+collections_test | FAIL in test-range Testing Range | (= (reduce + 0 (range 0.1 100)) 4960)
+core_test | ERROR in memfn-test | (= "cde" (substr "abcdefg" 2 3))
+core_test | ERROR in test-cljs-1839 | (instance? foo (foo.))
+core_test | ERROR in test-cljs-1839 | (instance? foo (new (.-foo x)))
+core_test | ERROR in test-cljs-1839 | (instance? foo (new foo))
+core_test | ERROR in test-cljs-1998 printing an Object with a null constructor | (= "#object[Object]" (pr-str (.create js/Object nil)))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \a (nth "ab" -0.5 :not-found))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \a (nth "ab" -0.5))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \a (nth "ab" 0 :not-found))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \a (nth "ab" 0))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \a (nth "ab" 0.5 :not-found))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \a (nth "ab" 0.5))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \b (nth "ab" 1 :not-found))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \b (nth "ab" 1))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \b (nth "ab" 1.5 :not-found))
+core_test | ERROR in test-cljs-2538 fractional indices in nth on strings | (== \b (nth "ab" 1.5))
+core_test | ERROR in test-cljs-2944 | (= (symbol (->Var nil (quote bar/foo) nil)) (quote bar/foo))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions clj->js | (= (clj->js nil) (js* "null"))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions clj->js | (= (clj->js true) (js* "true"))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions clj->js | (goog/isObject (clj->js {}))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions clj->js | (goog/typeOf "array" (clj->js #{}))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions clj->js | (goog/typeOf "array" (clj->js (quote ())))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions clj->js | (goog/typeOf "array" (clj->js []))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions js->clj | (= [[{:a 1, :b 2} {:a 1, :b 2}]] (js->clj (js* "[[{\"a\":1,\"b\":2}, {\"a\":1,\"b\":2}]]") :keywordize-keys true))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions js->clj | (= {"a" 1, "b" 2} (js->clj (js* "{\"a\":1,\"b\":2}")))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions js->clj | (= {"a" nil} (js->clj (js* "{\"a\":null}")))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions js->clj | (= {"a" true, "b" false} (js->clj (js* "{\"a\":true,\"b\":false}")))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions js->clj | (= {:a 1, :b 2} (js->clj (js* "{\"a\":1,\"b\":2}") :keywordize-keys true))
+core_test | ERROR in test-js-clj-conversions Testing JS / CLJS data conversions js->clj | (= {} (js->clj (js* "{}")))
+core_test | ERROR in test-transducers Testing transducers | (= (keep-indexed identity [:foo nil :bar nil :baz]) (sequence (keep-indexed identity) [:foo nil :bar nil :baz]))
+core_test | ERROR in uri-predicate Testing uri? | (not (uri? "http://clojurescript.org"))
+core_test | ERROR in uri-predicate Testing uri? | (not (uri? 42))
+core_test | ERROR in uri-predicate Testing uri? | (not (uri? []))
+core_test | ERROR in uri-predicate Testing uri? | (not (uri? {}))
+core_test | ERROR in uri-predicate Testing uri? | (uri? (goog.Uri. ""))
+core_test | ERROR in uri-predicate Testing uri? | (uri? (goog.Uri. "http://clojurescript.org"))
+core_test | ERROR in uri-predicate Testing uri? | (uri? (goog.Uri. "some string"))
+core_test | FAIL in test-807 Testing CLJS-807, big int, float, big dec literals | (= 9.007199254740996E15 9007199254740995N)
+core_test | FAIL in test-Throwable->map | (= (quote js/Error) (:type (nth via 0)))
+core_test | FAIL in test-Throwable->map | (= (quote js/Error) (:type (nth via 2)))
+core_test | FAIL in test-cljs-1721 | (= "d" (get-in {:a "data"} [:a 0] :not-found))
+core_test | FAIL in test-cljs-2457 | (thrown-with-msg? js/Error (corten.kernel/regexp ".* is not ISeqable") (seq (corten.kernel/js-obj "a" 1 "b" 2)))
+core_test | FAIL in test-cljs-2741 | (thrown-with-msg? js/Error (corten.kernel/regexp ".*Invalid arity: 0") ((fn ([x]) ([x y]))))
+core_test | FAIL in test-cljs-2741 | (thrown-with-msg? js/Error (corten.kernel/regexp ".*Invalid arity: 0") (fn-2741))
+core_test | FAIL in test-cljs-2741 | (thrown-with-msg? js/Error (corten.kernel/regexp ".*Invalid arity: 0") ({}))
+core_test | FAIL in test-cljs-2741 | (thrown-with-msg? js/Error (corten.kernel/regexp ".*Invalid arity: 3") ((fn ([x]) ([x y])) 1 2 3))
+core_test | FAIL in test-cljs-2741 | (thrown-with-msg? js/Error (corten.kernel/regexp ".*Invalid arity: 3") (fn-2741 1 2 3))
+core_test | FAIL in test-cljs-2741 | (thrown-with-msg? js/Error (corten.kernel/regexp ".*Invalid arity: 3") ({} 1 2 3))
+core_test | FAIL in test-cljs-2933 | (= "#object[cljs.core.Atom {:val 1}]" (pr-str (atom 1)))
+core_test | FAIL in test-cljs-2933 | (= "#object[cljs.core.Volatile {:val 2}]" (pr-str (volatile! 2)))
+core_test | FAIL in test-cljs-2934 | (= "#object[cljs.core.Delay {:status :pending, :val nil}]" (pr-str x))
+core_test | FAIL in test-cljs-2934 | (= "#object[cljs.core.Delay {:status :ready, :val 1}]" (pr-str x))
+core_test | FAIL in test-cljs-3119 | (= "a" (get "abc" -0.5))
+destructuring_test | FAIL in test-protocol-method-destructuring Testing protocol method destructuring basic operations | (= (str fs) \a)
+extend_to_native_test | ERROR in test-extend-to-protocols | (= :o (test-indexed a))
+extend_to_native_test | FAIL in test-extend-to-protocols | (nil? (test-chunked-seq a))
+extend_to_native_test | FAIL in test-extend-to-protocols | (nil? (test-map-entry a))
+hash_map_test | ERROR in test-cljs-1817 | nil
+hash_set_test | FAIL in test-hash-set-with-duplicate-keys Testing duplicate keys in array maps | (= {:foo 2} (hash-set :foo :foo))
+hashing_test | ERROR in test-cljs-1779 | (= (hash (keyword (quote app) "foo")) (hash (keyword "app" "foo")))
+hashing_test | ERROR in test-cljs-3290 | nil
+hashing_test | FAIL in test-mumur-support Testing murmur support | (== (int-rotate-left (bit-or 2014458966 0) 4) (bit-or 2166572391 0))
+hashing_test | FAIL in test-mumur-support Testing murmur support | (== (int-rotate-left (bit-or 4294967295 0) 4) (bit-or 4294967295 0))
+import_test | LOAD ERROR in (deftest test-import) - Unable to resolve symbol: Long.fromInt
+import_test | SKIPPED import [goog.math Vec2 Vec3] - refer: Vec2 does not exist
+interop_test | ERROR in test-es6-interfaces ES6 collection interfaces | (= (.get {:foo "bar"} :foo) "bar")
+invoke_test | LOAD ERROR in (declared-fn 1) - Var #'cljs.invoke-test/declared-fn is unbound
+invoke_test | LOAD ERROR in (gstr/urlEncode "foo") - Var #'goog.string/urlEncode is unbound
+invoke_test | LOAD ERROR in (js/goog.string.urlDecode "bar") - Var #'js/goog.string.urlDecode is unbound
+lite_collections_test | FAIL in test-obj-map | (identical? a b)
+macro_test | FAIL in test-cljs-2283 | (= ":a" (first (js-keys (js-obj :a 1))))
+npm_deps_test | ERROR in test-global-exports | (= (plus 1 2) 3)
+npm_deps_test | ERROR in test-module-processing | (= (array-seq (slc (corten.kernel/array 1 2 3) 1)) [2 3])
+npm_deps_test | ERROR in test-module-processing | (= (array/nth (corten.kernel/array 1 2 3) 1) 2)
+npm_deps_test | LOAD ERROR in (deftest test-cljs-1620) - No such namespace: es6hello/default
+npm_deps_test | LOAD ERROR in (deftest test-cljs-2286) - No such namespace: es6_calc/calculator.add
+npm_deps_test | SKIPPED require ["lodash/array" :as array :refer [slice] :rename {slice slc}] - Unsupported libspec: ["lodash/array" :as array :refer [slice] :rename {slice slc}]
+npm_deps_test | SKIPPED require [calculator :as vector :refer [add] :rename {add plus}] - Could not locate calculator.clj, .cljc or .cljs on the load path
+npm_deps_test | SKIPPED require [es6_calc] - Could not locate es6_calc.clj, .cljc or .cljs on the load path
+npm_deps_test | SKIPPED require [es6_default_hello :as es6hello] - Could not locate es6_default_hello.clj, .cljc or .cljs on the load path
+ns_test | ERROR in test-cljs-1677 | (.isArrayLike js/goog array-like)
+ns_test | FAIL in test-cljs-1677 | (goog-alias/isArrayLike array-like)
+ns_test | FAIL in test-cljs-1677 | (goog/isArrayLike array-like)
+parse_test | NO SUMMARY
+pprint_test | FAIL in cardinal-tests | (clojure.core/= (cl-format nil "~R = ~:*~:D" 2000000.0) "two million = 2,000,000")
+pprint_test | FAIL in d-tests | (clojure.core/= (cl-format nil "~D" 2000000.0) "2000000")
+pprint_test | FAIL in ordinal-tests | (clojure.core/= (cl-format nil "~:R = ~:*~:D" 2000000.0) "two millionth = 2,000,000")
+pprint_test | FAIL in pprint-table-tests | (clojure.core/= (with-out-str (print-table [:a :e :d :c] [{:a 5.47E22, :b {:a (quote is-a)}, :c ["hi" "there"]} {:b 5, :a -23, :c "dog", :d (quote panda)}])) "\n| :a | :e | :d | :c |\n|----------+-...
+pprint_test | FAIL in pprint-test | (clojure.core/= (with-pprint-dispatch code-dispatch (binding [*print-right-margin* 52] (write (quote (add-to-buffer this (make-buffer-blob (str (char c)) nil))) :stream nil))) "(add-to-buffer\n this \n (m...
+pprint_test | FAIL in print-length-tests | (clojure.core/= (binding [*print-length* 1] (with-out-str (pprint (int-array [1 2 3 4 5 6])))) "#js [1 ...]\n")
+pprint_test | FAIL in print-length-tests | (clojure.core/= (binding [*print-length* 2] (with-out-str (pprint (int-array [1 2 3 4 5 6])))) "#js [1 2 ...]\n")
+pprint_test | FAIL in print-length-tests | (clojure.core/= (binding [*print-length* 6] (with-out-str (pprint (int-array [1 2 3 4 5 6])))) "#js [1 2 3 4 5 6]\n")
+pprint_test | FAIL in print-length-tests | (clojure.core/= (binding [*print-length* 8] (with-out-str (pprint (int-array [1 2 3 4 5 6])))) "#js [1 2 3 4 5 6]\n")
+predicates_test | ERROR in test-int-preds | nil
+predicates_test | LOAD ERROR in (def int-val-table) - Unable to resolve symbol: Integer.fromNumber
+primitives_test | ERROR in test-3352 | (== ##Inf (/ 0))
+primitives_test | ERROR in test-instance? | (instance? js/Boolean (js/Boolean.))
+primitives_test | ERROR in test-instance? | (instance? js/Function (fn [x] x))
+primitives_test | ERROR in test-instance? | (instance? js/Function identity)
+primitives_test | ERROR in test-instance? | (instance? js/Function js/Object)
+primitives_test | ERROR in test-instance? | (instance? js/Number (js/Number. 0))
+primitives_test | ERROR in test-instance? | (instance? js/Object (js/Boolean.))
+primitives_test | ERROR in test-instance? | (instance? js/Object (js/Number. 0))
+primitives_test | ERROR in test-instance? | (instance? js/Object (js/String. ""))
+primitives_test | ERROR in test-instance? | (instance? js/String (js/String. ""))
+primitives_test | ERROR in test-instance? | (not (instance? js/Boolean false))
+primitives_test | ERROR in test-instance? | (not (instance? js/Boolean true))
+primitives_test | ERROR in test-misc | nil
+primitives_test | ERROR in test-regexps Testing regexps | (= (str (re-pattern "f(.)o")) (str (js* "/f(.)o/")))
+primitives_test | ERROR in test-symbols-and-keywords Testing keyword ctor | (= :a/b (keyword (quote a) (quote b)))
+primitives_test | ERROR in test-type | (= js/Boolean (type false))
+primitives_test | ERROR in test-type | (= js/Boolean (type true))
+primitives_test | ERROR in test-type | (= js/Function (type (fn [x] x)))
+primitives_test | ERROR in test-type | (= js/Function (type identity))
+primitives_test | ERROR in test-type | (= js/Function (type js/Object))
+primitives_test | FAIL in test-arithmetic Testing division | (= (/ 2) 0.5)
+primitives_test | FAIL in test-arithmetic Testing division | (= (apply / [2]) 0.5)
+primitives_test | FAIL in test-char? | (char? "0")
+primitives_test | FAIL in test-char? | (char? "0")
+primitives_test | FAIL in test-char? | (char? "")
+primitives_test | FAIL in test-char? | (char? "�")
+primitives_test | FAIL in test-char? | (char? (String/fromCharCode 10))
+primitives_test | FAIL in test-char? | (char? (String/fromCharCode 13))
+primitives_test | FAIL in test-instance? | (instance? js/Array (array))
+primitives_test | FAIL in test-instance? | (instance? js/Object (array))
+primitives_test | FAIL in test-instance? | (instance? js/Object (js-obj))
+primitives_test | FAIL in test-instance? | (instance? js/Object (js/Date.))
+primitives_test | FAIL in test-instance? | (instance? js/Object identity)
+primitives_test | FAIL in test-instance? | (not (instance? js/String ""))
+primitives_test | FAIL in test-misc Testing miscellaneous operations | (= "b" (get "abc" 1))
+primitives_test | FAIL in test-misc Testing miscellaneous operations | (= "c" (nth "abc" 2))
+primitives_test | FAIL in test-type | (= js/Array (type (array)))
+primitives_test | FAIL in test-type | (= js/Number (type 0))
+primitives_test | FAIL in test-type | (= js/Number (type js/Infinity))
+primitives_test | FAIL in test-type | (= js/Number (type js/NaN))
+primitives_test | FAIL in test-type | (= js/Object (type (js-obj)))
+printing_test | FAIL in test-printing Testing pr-str | (#{"[1 true {:a 2, :b \"x\\\"y\"} #js [3 4]]" "[1 true {:b \"x\\\"y\", :a 2} #js [3 4]]"} (pr-str [1 true {:a 2, :b "x\"y"} (array 3 4)]))
+printing_test | FAIL in test-printing Testing pr-str | (= (pr-str \a) "\"a\"")
+printing_test | FAIL in test-printing Testing prn-str | (#{"[1 true {:a 2, :b 42} #js [3 4]]\n" "[1 true {:b 42, :a 2} #js [3 4]]\n"} (prn-str [1 true {:a 2, :b 42} (array 3 4)]))
+proxy_test | ERROR in map-proxy | nil
+proxy_test | ERROR in vector-proxy | nil
+proxy_test | LOAD ERROR in (def proxy) - Var #'cljs.proxy-test/builder is unbound
+proxy_test | SKIPPED require [cljs.proxy :refer [builder]] - Could not locate cljs/proxy.clj, .cljc or .cljs on the load path
+repl_test | LOAD ERROR in (deftest test-cljs-3017) - No such namespace: cljs.repl/Error->map
+repl_test | LOAD ERROR in (deftest test-cljs-3019) - No such namespace: cljs.repl/Error->map
+repl_test | SKIPPED require [cljs.repl] - Could not locate cljs/repl.clj, .cljc or .cljs on the load path
+seqs_test | ERROR in cljs-3419-seq-js-iterable | nil
+seqs_test | ERROR in iteration-seq-equals-reduce | nil
+seqs_test | ERROR in test-cljs-3230 | nil
+seqs_test | ERROR in test-js-iterable? test that js-iterable? works on ES6 collections and normal values | (true? (js-iterable? (js/Set.)))
+seqs_test | FAIL in test-distinct Testing distinct? & distinct | (= (distinct "a") ["a"])
+seqs_test | FAIL in test-distinct Testing distinct? & distinct | (= (distinct "abcabab") ["a" "b" "c"])
+spec_test | ERROR in map-spec-generators | (= #{[:a :b] [:a :b :c :d] [:a :b :c :d :e] [:a :b :c :e] [:a :c :d] [:a :c :d :e] [:a :c :e]} (->> (s/exercise (s/keys :req-un [:cljs.spec-test/a (or :cljs.spec-test/b (and :cljs.spec-test/c (or :...
+spec_test | ERROR in map-spec-generators | (= #{[:a] [:a :b] [:a :b :c] [:a :c]} (->> (s/exercise (s/keys :req-un [:cljs.spec-test/a] :opt-un [:cljs.spec-test/b :cljs.spec-test/c]) 100) (map (comp sort keys first)) (into #{})))
+spec_test | ERROR in map-spec-generators | (= #{[:cljs.spec-test/a :cljs.spec-test/b] [:cljs.spec-test/a :cljs.spec-test/b :cljs.spec-test/c :cljs.spec-test/d] [:cljs.spec-test/a :cljs.spec-test/b :cljs.spec-test/c :cljs.spec-test/d :cljs.s...
+spec_test | ERROR in map-spec-generators | (= #{[:cljs.spec-test/a] [:cljs.spec-test/a :cljs.spec-test/b] [:cljs.spec-test/a :cljs.spec-test/b :cljs.spec-test/c] [:cljs.spec-test/a :cljs.spec-test/c]} (->> (s/exercise (s/keys :req [:cljs.sp...
+spec_test | FAIL in &-explain-pred | (= (quote (cljs.spec.alpha/& cljs.core/int? cljs.core/even?)) (-> (s/explain-data (s/& int? even?) [0 2]) :cljs.spec.alpha/problems first :pred))
+spec_test | FAIL in &-explain-pred | (= (quote cljs.core/int?) (-> (s/explain-data (s/& int? even?) []) :cljs.spec.alpha/problems first :pred))
+spec_test | FAIL in coll-form | (= (s/form (s/coll-of (s/tuple (s/tuple int?)))) (quote (cljs.spec.alpha/coll-of (cljs.spec.alpha/tuple (cljs.spec.alpha/tuple cljs.core/int?)))))
+spec_test | FAIL in coll-form | (= (s/form (s/coll-of int? :gen (fn* [] (gen/return [1 2])))) (quote (cljs.spec.alpha/coll-of cljs.core/int? :gen (fn* [] (gen/return [1 2])))))
+spec_test | FAIL in coll-form | (= (s/form (s/coll-of int? :kind vector?)) (quote (cljs.spec.alpha/coll-of cljs.core/int? :kind cljs.core/vector?)))
+spec_test | FAIL in coll-form | (= (s/form (s/coll-of int?)) (quote (cljs.spec.alpha/coll-of cljs.core/int?)))
+spec_test | FAIL in coll-form | (= (s/form (s/every int?)) (quote (cljs.spec.alpha/every cljs.core/int?)))
+spec_test | FAIL in coll-form | (= (s/form (s/every-kv int? int?)) (quote (cljs.spec.alpha/every-kv cljs.core/int? cljs.core/int?)))
+spec_test | FAIL in coll-form | (= (s/form (s/map-of int? any?)) (quote (cljs.spec.alpha/map-of cljs.core/int? cljs.core/any?)))
+spec_test | FAIL in conform-explain | (let [co (s/conform a 20) e (:cljs.spec.alpha/problems (s/explain-data a 20))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co)) (wh...
+spec_test | FAIL in conform-explain | (let [co (s/conform a 3) e (:cljs.spec.alpha/problems (s/explain-data a 3))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co)) (when...
+spec_test | FAIL in conform-explain | (let [co (s/conform andre :k) e (:cljs.spec.alpha/problems (s/explain-data andre :k))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" ...
+spec_test | FAIL in conform-explain | (let [co (s/conform c ["a"]) e (:cljs.spec.alpha/problems (s/explain-data c ["a"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co...
+spec_test | FAIL in conform-explain | (let [co (s/conform c ["s" :k 5]) e (:cljs.spec.alpha/problems (s/explain-data c ["s" :k 5]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\ta...
+spec_test | FAIL in conform-explain | (let [co (s/conform c [:a]) e (:cljs.spec.alpha/problems (s/explain-data c [:a]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co))...
+spec_test | FAIL in conform-explain | (let [co (s/conform c []) e (:cljs.spec.alpha/problems (s/explain-data c []))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co)) (wh...
+spec_test | FAIL in conform-explain | (let [co (s/conform c nil) e (:cljs.spec.alpha/problems (s/explain-data c nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co)) (...
+spec_test | FAIL in conform-explain | (let [co (s/conform coll nil) e (:cljs.spec.alpha/problems (s/explain-data coll nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" ...
+spec_test | FAIL in conform-explain | (let [co (s/conform drange 3.0) e (:cljs.spec.alpha/problems (s/explain-data drange 3.0))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactua...
+spec_test | FAIL in conform-explain | (let [co (s/conform either [:b "s"]) e (:cljs.spec.alpha/problems (s/explain-data either [:b "s"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid ...
+spec_test | FAIL in conform-explain | (let [co (s/conform either []) e (:cljs.spec.alpha/problems (s/explain-data either []))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=...
+spec_test | FAIL in conform-explain | (let [co (s/conform either nil) e (:cljs.spec.alpha/problems (s/explain-data either nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactua...
+spec_test | FAIL in conform-explain | (let [co (s/conform irange (js/Date. -1009843200000)) e (:cljs.spec.alpha/problems (s/explain-data irange (js/Date. -1009843200000)))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\t...
+spec_test | FAIL in conform-explain | (let [co (s/conform irange (js/Date. -757382400000)) e (:cljs.spec.alpha/problems (s/explain-data irange (js/Date. -757382400000)))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\tex...
+spec_test | FAIL in conform-explain | (let [co (s/conform lrange 42) e (:cljs.spec.alpha/problems (s/explain-data lrange 42))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=...
+spec_test | FAIL in conform-explain | (let [co (s/conform m nil) e (:cljs.spec.alpha/problems (s/explain-data m nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co)) (...
+spec_test | FAIL in conform-explain | (let [co (s/conform mkeys nil) e (:cljs.spec.alpha/problems (s/explain-data mkeys nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=...
+spec_test | FAIL in conform-explain | (let [co (s/conform mkeys2 nil) e (:cljs.spec.alpha/problems (s/explain-data mkeys2 nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactua...
+spec_test | FAIL in conform-explain | (let [co (s/conform o (quote a)) e (:cljs.spec.alpha/problems (s/explain-data o (quote a)))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tact...
+spec_test | FAIL in conform-explain | (let [co (s/conform opt :k) e (:cljs.spec.alpha/problems (s/explain-data opt :k))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co))...
+spec_test | FAIL in conform-explain | (let [co (s/conform opt ["a"]) e (:cljs.spec.alpha/problems (s/explain-data opt ["a"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=...
+spec_test | FAIL in conform-explain | (let [co (s/conform opt [:k1 :k2 "x"]) e (:cljs.spec.alpha/problems (s/explain-data opt [:k1 :k2 "x"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/inva...
+spec_test | FAIL in conform-explain | (let [co (s/conform opt [:k1 :k2]) e (:cljs.spec.alpha/problems (s/explain-data opt [:k1 :k2]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\...
+spec_test | FAIL in conform-explain | (let [co (s/conform plus ["a"]) e (:cljs.spec.alpha/problems (s/explain-data plus ["a"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactua...
+spec_test | FAIL in conform-explain | (let [co (s/conform plus [:k1 :k2 "x"]) e (:cljs.spec.alpha/problems (s/explain-data plus [:k1 :k2 "x"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/in...
+spec_test | FAIL in conform-explain | (let [co (s/conform plus []) e (:cljs.spec.alpha/problems (s/explain-data plus []))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" co...
+spec_test | FAIL in conform-explain | (let [co (s/conform plus nil) e (:cljs.spec.alpha/problems (s/explain-data plus nil))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactual=" ...
+spec_test | FAIL in conform-explain | (let [co (s/conform star ["a"]) e (:cljs.spec.alpha/problems (s/explain-data star ["a"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/invalid "\n\tactua...
+spec_test | FAIL in conform-explain | (let [co (s/conform star [:k1 :k2 "x"]) e (:cljs.spec.alpha/problems (s/explain-data star [:k1 :k2 "x"]))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/in...
+spec_test | FAIL in conform-explain | (let [co (s/conform v (quote (:a :b))) e (:cljs.spec.alpha/problems (s/explain-data v (quote (:a :b))))] (when (not= :cljs.spec.alpha/invalid co) (println "conform fail\n\texpect=" :cljs.spec.alpha/inva...
+spec_test | FAIL in keys-explain-pred | (= (quote cljs.core/map?) (-> (s/explain-data (s/keys :req [:cljs.spec-test/x]) :a) :cljs.spec.alpha/problems first :pred))
+spec_test | FAIL in tuple-explain-pred | (= (quote (cljs.core/= (cljs.core/count %) 1)) (-> (s/explain-data (s/tuple int?) []) :cljs.spec.alpha/problems first :pred))
+spec_test | FAIL in tuple-explain-pred | (= (quote cljs.core/vector?) (-> (s/explain-data (s/tuple int?) :a) :cljs.spec.alpha/problems first :pred))
+test_test | ERROR in js-line-and-column-test | (= [2 3] (ct/js-line-and-column "2:3"))
+test_test | ERROR in js-line-and-column-test | (= [2 3] (ct/js-line-and-column "foo:2:3"))
+test_test | ERROR in js-line-and-column-test | (= [2 3] (ct/js-line-and-column "foo:bar:2:3"))
+test_test | ERROR in js-line-and-column-test | nil
+test_test | ERROR in test-js-filename | (= "core-advanced-test.js" (ct/js-filename (str "nW@" (ct/cljs-output-dir) "/core-advanced-test.js:1191:77")))
