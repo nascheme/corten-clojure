@@ -5,7 +5,7 @@ with a runtime and compiler written in Rust. No JVM, JavaScript engine, or
 Common Lisp installation is required.
 
 This branch started with a Rust port of the
-[Corman Lisp](https://github.com/sharplispers/cormanlisp) C++ kernel. The Common
+[Corman Lisp](https://github.com/nascheme/cormanlisp-rs) C++ kernel. The Common
 Lisp layer has since been removed. Corten Clojure builds on that kernel ancestry
 as a native Clojure system; its executable is `corten`.
 
@@ -215,8 +215,9 @@ ClojureScript, SCI-derived code, and the test.check RNG port retain EPL 1.0;
 `clojure.repl` retains CPL 1.0. Closure-derived code carries Apache 2.0 notices,
 and benchmark translations and Rust dependencies retain their own notices.
 
-See [LICENSE](LICENSE) for full license texts, attribution, and scope. Modified
-upstream material is not relicensed as MIT. Distributing binaries or saved
-images containing EPL/CPL-covered code also requires making the corresponding
-covered source available under its license and telling recipients how to obtain
-it; retain the license and copyright notices with redistributions.
+See [LICENSE](LICENSE.txt) for full license texts, attribution, and scope.
+Modified upstream material is not relicensed as MIT. Distributing binaries or
+saved images containing EPL/CPL-covered code also requires making the
+corresponding covered source available under its license and telling recipients
+how to obtain it; retain the license and copyright notices with
+redistributions.
